@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Support · Health-wise (Wellness)</title>
+  <meta name="description" content="Get support for Health-wise (Wellness). Contact us by email or review common troubleshooting steps." />
+  <style>
+    :root { --fg:#111; --muted:#555; --bg:#fff; --accent:#0b74ff; }
+    *{box-sizing:border-box} body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+    header,main,footer{max-width:960px;margin:auto;padding:16px}
+    nav a{margin-right:14px;text-decoration:none;color:var(--accent)}
+    h1{font-size:1.75rem;margin:12px 0 8px}
+    .card{border:1px solid #eee;border-radius:10px;padding:16px;background:#fafafa;margin:14px 0}
+    label{display:block;margin:10px 0 6px} input,textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:8px}
+    button{background:var(--accent);color:#fff;border:0;border-radius:8px;padding:10px 14px;cursor:pointer}
+    .muted{color:var(--muted)} footer{border-top:1px solid #eee;margin-top:40px;color:var(--muted)}
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html"><strong>Contact</strong></a>
+  </nav>
+  <h1>Contact Support</h1>
+  <p class="muted">We usually respond within 1–2 business days.</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Email</h2>
+    <p>Send us a message at <a href="mailto:YOUR_SUPPORT_EMAIL">YOUR_SUPPORT_EMAIL</a>.</p>
+    <p class="muted">Including the details below helps us investigate faster:</p>
+    <ul>
+      <li>App version (from Settings → About)</li>
+      <li>iPhone model and iOS version</li>
+      <li>Steps to reproduce the issue (what you expected vs. what happened)</li>
+      <li>Screenshots or screen recording if possible</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Quick Troubleshooting</h2>
+    <ul>
+      <li>Make sure you’re on the latest app version from the App Store.</li>
+      <li>Check permissions (Motion &amp; Fitness, Location, Notifications) in iOS Settings.</li>
+      <li>For GPS: disable Low Power Mode; ensure good outdoor signal.</li>
+      <li>Restart the app or your device if the issue persists.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Contact Form (opens email)</h2>
+    <form onsubmit="handleSubmit(event)">
+      <label for="topic">Topic</label>
+      <input id="topic" name="topic" placeholder="Bug report / Feature request / Billing / Other" required />
+      <label for="msg">Message</label>
+      <textarea id="msg" name="msg" rows="6" placeholder="Describe the issue or request…" required></textarea>
+      <div style="margin-top:10px">
+        <button type="submit">Compose Email</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer>
+  © <span id="y"></span> DELEBOSTON INC · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a>
+</footer>
+
+<script>
+  document.getElementById('y').textContent=new Date().getFullYear();
+  function handleSubmit(e){
+    e.preventDefault();
+    const to = 'YOUR_SUPPORT_EMAIL';
+    const subject = encodeURIComponent('[Health-wise Support] ' + document.getElementById('topic').value);
+    const body = encodeURIComponent(document.getElementById('msg').value + '\n\n—\nApp: Health-wise (Wellness)\nDevice: iPhone (fill in)\niOS: (fill in)\nApp version: (Settings → About)');
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+  }
+</script>
+</body>
+</html>
