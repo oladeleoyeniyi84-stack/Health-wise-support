@@ -2,69 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Health-wise — Support</title>
-  <meta name="description" content="Help, FAQ, and contact for the Health-wise wellness app." />
-  <link rel="icon" href="data:," />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Health-wise (Wellness) • Support</title>
+  <meta name="description" content="Support site for the Health-wise (Wellness) app. FAQs, troubleshooting, privacy, terms, and contact." />
+  <meta property="og:title" content="Health-wise (Wellness) • Support" />
+  <meta property="og:description" content="FAQs, troubleshooting, privacy, terms, and contact for Health-wise (Wellness)." />
+  <meta name="theme-color" content="#0d6efd" />
   <style>
-    :root{--fg:#111;--muted:#555;--bg:#fff;--accent:#1a73e8}
-    *{box-sizing:border-box} body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;color:var(--fg);background:var(--bg)}
-    header{padding:42px 20px 12px;max-width:920px;margin:auto}
-    h1{margin:0 0 8px;font-size:32px} p.lead{margin:0;color:var(--muted)}
-    main{max-width:920px;margin:24px auto;padding:0 20px}
-    section{border:1px solid #e8e8e8;border-radius:12px;padding:20px;margin:14px 0;background:#fff}
-    h2{margin:0 0 10px;font-size:20px}
-    ul{margin:8px 0 0 22px} li{margin:4px 0}
-    .pill{display:inline-block;padding:2px 10px;border:1px solid #e8e8e8;border-radius:999px;font-size:12px;color:var(--muted)}
-    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-    footer{max-width:920px;margin:36px auto 28px;padding:0 20px;color:var(--muted);font-size:14px}
-    code{background:#f6f7f9;border:1px solid #eef0f3;padding:2px 6px;border-radius:6px}
+    :root{
+      --bg:#0b1220;--fg:#e6edf3;--muted:#9fb0c3;--link:#4aa3ff;
+      --card:#111a2b;--bd:#213047;--accent:#00d48a;--accent2:#8b5cf6
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+    a{color:var(--link);text-decoration:none}
+    header,footer{border-bottom:1px solid var(--bd);padding:16px 20px}
+    footer{border-top:1px solid var(--bd);border-bottom:0;margin-top:40px;color:var(--muted)}
+    .container{max-width:980px;margin:0 auto;padding:20px}
+    nav a{margin-right:14px} nav a.active{color:var(--accent);font-weight:600}
+    .hero{display:grid;gap:10px;padding:30px 0 10px}
+    h1{font-size:clamp(1.8rem,3.2vw,2.6rem);margin:0}
+    .tag{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#041014;font-weight:800;padding:6px 10px;border-radius:999px;margin-right:10px}
+    .lede{color:var(--muted);max-width:68ch}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:20px}
+    .card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px;height:100%}
+    .card h3{margin:0 0 6px;font-size:1.05rem}
+    .btn{display:inline-block;margin-top:10px;padding:.65rem 1rem;border-radius:10px;background:var(--accent);color:#041014;font-weight:700}
+    .btn.secondary{background:#0c1626;color:var(--fg);border:1px solid var(--bd)}
+    ul{padding-left:1.2rem;margin:8px 0}
+    .cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+    .kicker{color:var(--muted);font-size:.95rem}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--muted)}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Health-wise Support</h1>
-    <p class="lead">Help, FAQ, and contact for the Health-wise wellness app.</p>
-    <div style="margin-top:10px"><span class="pill">iOS</span> <span class="pill">Flutter</span></div>
+  <header role="banner">
+    <div class="container">
+      <nav aria-label="Primary">
+        <a class="active" href="index.html" aria-current="page">Home</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>About Health-wise</h2>
-      <p>Health-wise simplifies wellness by combining powerful tracking tools with AI-driven insights. Designed for both men and women, it helps you build sustainable habits, stay motivated, and take control of your health journey.</p>
-      <ul>
-        <li>Track activity, nutrition, hydration</li>
-        <li>Monitor stress, mood, and sleep patterns</li>
-        <li>Personalized AI-driven health insights</li>
-        <li>GPS for walking, jogging, workout tracking</li>
-        <li>Smart reminders & notifications</li>
-        <li>Light and dark mode</li>
-      </ul>
+  <main class="container">
+    <section class="hero" aria-labelledby="title">
+      <div>
+        <span class="tag">Support</span>
+        <h1 id="title">Health-wise (Wellness)</h1>
+        <p class="lede">Welcome! This page has quick fixes, feature guides, and ways to reach us. If you’re stuck, jump to the FAQ or contact support.</p>
+        <div class="cta">
+          <a class="btn" href="faq.html">View FAQ</a>
+          <a class="btn secondary" href="contact.html">Contact Support</a>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>FAQ</h2>
-      <ul>
-        <li><strong>Does Health-wise require an account?</strong> The initial version stores data on device. Future versions may add optional cloud sync.</li>
-        <li><strong>What permissions are needed?</strong> Motion/fitness, location (for GPS tracking), and notifications (for reminders). All are optional and can be changed in Settings.</li>
-        <li><strong>Which devices are supported?</strong> iPhone running iOS 15+.</li>
-      </ul>
+    <section aria-labelledby="quick">
+      <h2 id="quick" class="kicker">Quick help</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Permissions to allow</h3>
+          <ul>
+            <li><strong>Motion &amp; Fitness</strong> for step counting and activity.</li>
+            <li><strong>Location</strong> (While Using) for GPS walks/runs.</li>
+            <li><strong>Notifications</strong> for reminders.</li>
+            <li><strong>Health</strong> (where available) for metrics sync.</li>
+          </ul>
+          <a class="btn secondary" href="faq.html#permissions">Learn more</a>
+        </article>
+
+        <article class="card">
+          <h3>Improve GPS accuracy</h3>
+          <ul>
+            <li>Disable Low Power Mode during workouts.</li>
+            <li>Keep the screen off but phone unlocked in a pocket/armband.</li>
+            <li>Start in an open area for a strong initial lock.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Common fixes</h3>
+          <ul>
+            <li>Force-quit and reopen the app.</li>
+            <li>Reboot the device after granting permissions.</li>
+            <li>Update to the latest app &amp; iOS versions.</li>
+          </ul>
+          <a class="btn secondary" href="faq.html#troubleshooting">Troubleshooting</a>
+        </article>
+      </div>
     </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>Email support: <a href="mailto:oladeleoyeniyi84@gmail.com">oladeleoyeniyi84@gmail.com</a></p>
-      <p>Bug reports can also be filed on <a href="https://github.com/oladeleoyeniyi84-stack/Health-wise-support/issues">GitHub Issues</a>.</p>
+    <section aria-labelledby="policies" style="margin-top:26px">
+      <h2 id="policies" class="kicker">Policies</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Privacy Policy</h3>
+          <p>How we collect, use, and protect your data.</p>
+          <a class="btn" href="privacy.html">View Privacy</a>
+        </article>
+        <article class="card">
+          <h3>Terms of Use</h3>
+          <p>Rules for using Health-wise and important legal info.</p>
+          <a class="btn" href="terms.html">View Terms</a>
+        </article>
+        <article class="card">
+          <h3>Contact</h3>
+          <p>Need a hand? Email us with device, iOS version, and steps to reproduce.</p>
+          <a class="btn" href="contact.html">Contact Support</a>
+        </article>
+      </div>
     </section>
 
-    <section>
-      <h2>Privacy</h2>
-      <p>Read our <a href="./privacy.html">Privacy Policy</a>. We only request the minimum permissions required for core features and do not sell personal data.</p>
+    <section aria-labelledby="about" style="margin-top:26px">
+      <h2 id="about" class="kicker">About the app</h2>
+      <div class="card">
+        <p><strong>Health-wise</strong> helps you track activity, sleep, mood, hydration, and more — with smart reminders and gentle insights to build sustainable habits.</p>
+        <p class="mono">Bundle ID: <code>com.deleboston.health-wise</code></p>
+      </div>
     </section>
   </main>
 
-  <footer>
-    © <span id="y"></span> DeleBoston Inc. All rights reserved. • <a href="./privacy.html">Privacy</a>
+  <footer role="contentinfo">
+    <div class="container">
+      © <span id="y"></span> DELEBOSTON INC • Health-wise (Wellness) • <a href="contact.html">Support</a>
+    </div>
   </footer>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
