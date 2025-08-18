@@ -91,6 +91,34 @@
   <h2>10) Contact</h2>
   <p>Questions? Email us at <a href="mailto:YOUR_SUPPORT_EMAIL">YOUR_SUPPORT_EMAIL</a> or visit our <a href="contact.html">Contact</a> page.</p>
 </main>
+  <footer class="footer">
+  <div class="container">
+    <div class="grid two">
+      <div>
+        <strong>Health-wise (Wellness)</strong>
+        <p class="muted">Support site for the Health-wise mobile app. Find FAQs, policies, and ways to contact us.</p>
+      </div>
+      <div>
+        <p>
+          <a href="privacy.html">Privacy Policy</a> ·
+          <a href="terms.html">Terms of Use</a> ·
+          <a href="faq.html">FAQs</a> ·
+          <a href="contact.html">Contact</a>
+        </p>
+        <p>© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>
+    // highlight current page in nav
+    const map={ "index.html":"home","faq.html":"faq","privacy.html":"privacy","terms.html":"terms","contact.html":"contact" };
+    const path = location.pathname.split('/').pop() || "index.html";
+    const key = map[path] || null;
+    if(key){ const el = document.querySelector(`.menu a[data-nav="${key}"]`); if(el){ el.setAttribute("aria-current","page"); } }
+  </script>
+</footer>
+
 
 <footer>
   © <span id="y"></span> DELEBOSTON INC · All rights reserved.
