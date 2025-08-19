@@ -1,7 +1,14 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Privacy Policy — Health-wise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Privacy policy for Health-wise (Wellness).">
+</head>
+<body>
 
-<!-- Navbar -->
 <nav class="nav" role="navigation" aria-label="Primary">
   <div class="nav-inner">
     <a class="brand" href="index.html">Health-wise Support</a>
@@ -16,71 +23,64 @@
     </div>
   </div>
 </nav>
-<!doctype html>
-<html lang="en">
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Health-wise — Privacy Policy</title>
-<style>body{font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;max-width:860px;margin:40px auto;padding:0 20px;color:#111}h1{margin:0 0 10px}h2{margin-top:26px}a{color:#1a73e8;text-decoration:none}a:hover{text-decoration:underline}code{background:#f6f7f9;border:1px solid #eef0f3;padding:2px 6px;border-radius:6px}</style>
-<h1>Privacy Policy</h1>
-<p><em>Last updated: <script>document.write(new Date().toISOString().slice(0,10))</script></em></p>
 
-<p>Health-wise respects your privacy. This policy explains what we collect and how it’s used.</p>
+<main class="container section">
+  <div class="card">
+    <h1>Privacy Policy</h1>
+    <p>Effective: <strong>Aug 16, 2025</strong></p>
+    <p class="notice">Summary: We collect only what’s needed to run the app and improve your experience. You control your data.</p>
 
-<h2>Data We Collect</h2>
-<ul>
-  <li><strong>On-device wellness data</strong> you enter (e.g., activity, hydration, notes). Stored locally on your device.</li>
-  <li><strong>Optional permissions</strong> you grant:
+    <h2>Information We Collect</h2>
     <ul>
-      <li>Location — for GPS workout tracking.</li>
-      <li>Motion/Fitness — to measure steps/activities.</li>
-      <li>Notifications — to send reminders.</li>
+      <li><strong>Account &amp; profile</strong> (if created): name, email.</li>
+      <li><strong>Health &amp; activity data</strong> you choose to record (steps, workouts, mood, hydration).</li>
+      <li><strong>Device data</strong>: app version, OS, crash logs.</li>
+      <li><strong>Location</strong> (optional) for GPS routes and nearby features.</li>
     </ul>
-  </li>
-</ul>
- <footer class="footer">
+
+    <h2>How We Use Data</h2>
+    <ul>
+      <li>Provide core features (tracking, insights, reminders).</li>
+      <li>Sync across devices and enable backup/restore.</li>
+      <li>Diagnostics, crash reporting, and to prevent abuse.</li>
+    </ul>
+
+    <h2>Your Choices</h2>
+    <ul>
+      <li>Manage permissions anytime in system Settings.</li>
+      <li>Export or delete your data by contacting us at the address on <a href="contact.html">Contact</a>.</li>
+      <li>Opt out of analytics where offered in-app.</li>
+    </ul>
+
+    <h2>Data Retention &amp; Security</h2>
+    <p>We retain personal data only as long as necessary for the purposes above. We use industry-standard safeguards and never sell personal data.</p>
+
+    <h2>Children</h2>
+    <p>Health-wise is not directed to children under 13. If you believe a child has provided data, contact us to remove it.</p>
+
+    <h2>Contact</h2>
+    <p>Questions? <a href="contact.html">Contact Support</a>.</p>
+  </div>
+</main>
+
+<footer class="footer">
   <div class="container">
     <div class="grid two">
+      <div><strong>Health-wise (Wellness)</strong></div>
       <div>
-        <strong>Health-wise (Wellness)</strong>
-        <p class="muted">Support site for the Health-wise mobile app. Find FAQs, policies, and ways to contact us.</p>
-      </div>
-      <div>
-        <p>
-          <a href="privacy.html">Privacy Policy</a> ·
-          <a href="terms.html">Terms of Use</a> ·
-          <a href="faq.html">FAQs</a> ·
-          <a href="contact.html">Contact</a>
-        </p>
-        <p>© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="faq.html">FAQs</a> · <a href="contact.html">Contact</a></p>
+        <p>© <span id="y"></span> DELEBOSTON INC.</p>
       </div>
     </div>
   </div>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
   <script>
-    // highlight current page in nav
     const map={ "index.html":"home","faq.html":"faq","privacy.html":"privacy","terms.html":"terms","contact.html":"contact" };
-    const path = location.pathname.split('/').pop() || "index.html";
+    const path = location.pathname.split('/').pop() || "privacy.html";
     const key = map[path] || null;
     if(key){ const el = document.querySelector(`.menu a[data-nav="${key}"]`); if(el){ el.setAttribute("aria-current","page"); } }
   </script>
 </footer>
 
-
-<h2>How We Use Data</h2>
-<ul>
-  <li>Provide core features (tracking, insights, reminders).</li>
-  <li>Improve app performance and reliability.</li>
-</ul>
-
-<h2>Sharing</h2>
-<p>We do not sell your personal data. Data is not shared with third parties except as required by law.</p>
-
-<h2>Security</h2>
-<p>We use platform security best practices. You can delete the app to remove on-device data.</p>
-
-<h2>Contact</h2>
-<p>Questions? <a href="mailto:oladeleoyeniyi84@gmail.com">oladeleoyeniyi84@gmail.com</a></p>
-
-<p><a href="./">← Back to Support</a></p>
- 
-
+</body>
+</html>
