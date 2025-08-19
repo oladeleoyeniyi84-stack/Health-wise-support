@@ -1,5 +1,13 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Health-wise Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Support site for Health-wise (Wellness). FAQs, troubleshooting, and contact info.">
+</head>
+<body>
 
 <!-- Navbar -->
 <nav class="nav" role="navigation" aria-label="Primary">
@@ -11,140 +19,61 @@
       <a href="index.html" data-nav="home">Home</a>
       <a href="faq.html" data-nav="faq">FAQs</a>
       <a href="privacy.html" data-nav="privacy">Privacy</a>
-      <a href="terms.html" data-nav="te
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Health-wise (Wellness) • Support</title>
-  <meta name="description" content="Support site for the Health-wise (Wellness) app. FAQs, troubleshooting, privacy, terms, and contact." />
-  <meta property="og:title" content="Health-wise (Wellness) • Support" />
-  <meta property="og:description" content="FAQs, troubleshooting, privacy, terms, and contact for Health-wise (Wellness)." />
-  <meta name="theme-color" content="#0d6efd" />
-  <style>
-    :root{
-      --bg:#0b1220;--fg:#e6edf3;--muted:#9fb0c3;--link:#4aa3ff;
-      --card:#111a2b;--bd:#213047;--accent:#00d48a;--accent2:#8b5cf6
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
-    a{color:var(--link);text-decoration:none}
-    header,footer{border-bottom:1px solid var(--bd);padding:16px 20px}
-    footer{border-top:1px solid var(--bd);border-bottom:0;margin-top:40px;color:var(--muted)}
-    .container{max-width:980px;margin:0 auto;padding:20px}
-    nav a{margin-right:14px} nav a.active{color:var(--accent);font-weight:600}
-    .hero{display:grid;gap:10px;padding:30px 0 10px}
-    h1{font-size:clamp(1.8rem,3.2vw,2.6rem);margin:0}
-    .tag{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#041014;font-weight:800;padding:6px 10px;border-radius:999px;margin-right:10px}
-    .lede{color:var(--muted);max-width:68ch}
-    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:20px}
-    .card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px;height:100%}
-    .card h3{margin:0 0 6px;font-size:1.05rem}
-    .btn{display:inline-block;margin-top:10px;padding:.65rem 1rem;border-radius:10px;background:var(--accent);color:#041014;font-weight:700}
-    .btn.secondary{background:#0c1626;color:var(--fg);border:1px solid var(--bd)}
-    ul{padding-left:1.2rem;margin:8px 0}
-    .cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
-    .kicker{color:var(--muted);font-size:.95rem}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--muted)}
-  </style>
-</head>
-<body>
-  <header role="banner">
-    <div class="container">
-      <nav aria-label="Primary">
-        <a class="active" href="index.html" aria-current="page">Home</a>
-        <a href="faq.html">FAQ</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <a href="terms.html" data-nav="terms">Terms</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <main class="container">
-    <section class="hero" aria-labelledby="title">
-      <div>
-        <span class="tag">Support</span>
-        <h1 id="title">Health-wise (Wellness)</h1>
-        <p class="lede">Welcome! This page has quick fixes, feature guides, and ways to reach us. If you’re stuck, jump to the FAQ or contact support.</p>
-        <div class="cta">
-          <a class="btn" href="faq.html">View FAQ</a>
-          <a class="btn secondary" href="contact.html">Contact Support</a>
-        </div>
-      </div>
-    </section>
+<header class="container section">
+  <div class="card">
+    <h1>Welcome to Health-wise Support</h1>
+    <p>Your hub for help articles, policies, and ways to reach our team.</p>
+    <div class="notice">Tip: Press <span class="kbd">Ctrl</span> + <span class="kbd">F</span> (or <span class="kbd">⌘</span> + <span class="kbd">F</span> on Mac) to search this page.</div>
+  </div>
+</header>
 
-    <section aria-labelledby="quick">
-      <h2 id="quick" class="kicker">Quick help</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Permissions to allow</h3>
-          <ul>
-            <li><strong>Motion &amp; Fitness</strong> for step counting and activity.</li>
-            <li><strong>Location</strong> (While Using) for GPS walks/runs.</li>
-            <li><strong>Notifications</strong> for reminders.</li>
-            <li><strong>Health</strong> (where available) for metrics sync.</li>
-          </ul>
-          <a class="btn secondary" href="faq.html#permissions">Learn more</a>
-        </article>
+<main class="container section">
+  <div class="grid three">
+    <article class="card">
+      <h2>Quick start</h2>
+      <ol>
+        <li>Grant Motion, Fitness &amp; Location permissions on first launch.</li>
+        <li>Enable notifications for reminders.</li>
+        <li>For GPS routes, keep Low Power Mode off.</li>
+      </ol>
+    </article>
 
-        <article class="card">
-          <h3>Improve GPS accuracy</h3>
-          <ul>
-            <li>Disable Low Power Mode during workouts.</li>
-            <li>Keep the screen off but phone unlocked in a pocket/armband.</li>
-            <li>Start in an open area for a strong initial lock.</li>
-          </ul>
-        </article>
+    <article class="card">
+      <h2>Popular topics</h2>
+      <ul>
+        <li><a href="faq.html#permissions">Why we ask for permissions</a></li>
+        <li><a href="faq.html#sync">Sync &amp; backup</a></li>
+        <li><a href="faq.html#billing">Billing &amp; refunds</a></li>
+      </ul>
+    </article>
 
-        <article class="card">
-          <h3>Common fixes</h3>
-          <ul>
-            <li>Force-quit and reopen the app.</li>
-            <li>Reboot the device after granting permissions.</li>
-            <li>Update to the latest app &amp; iOS versions.</li>
-          </ul>
-          <a class="btn secondary" href="faq.html#troubleshooting">Troubleshooting</a>
-        </article>
-      </div>
-    </section>
+    <article class="card">
+      <h2>Policies</h2>
+      <p>Our commitment to your privacy and safety:</p>
+      <p><a class="btn" href="privacy.html">Read Privacy Policy</a></p>
+      <p><a class="btn secondary" href="terms.html">View Terms of Use</a></p>
+    </article>
+  </div>
 
-    <section aria-labelledby="policies" style="margin-top:26px">
-      <h2 id="policies" class="kicker">Policies</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Privacy Policy</h3>
-          <p>How we collect, use, and protect your data.</p>
-          <a class="btn" href="privacy.html">View Privacy</a>
-        </article>
-        <article class="card">
-          <h3>Terms of Use</h3>
-          <p>Rules for using Health-wise and important legal info.</p>
-          <a class="btn" href="terms.html">View Terms</a>
-        </article>
-        <article class="card">
-          <h3>Contact</h3>
-          <p>Need a hand? Email us with device, iOS version, and steps to reproduce.</p>
-          <a class="btn" href="contact.html">Contact Support</a>
-        </article>
-      </div>
-    </section>
+  <div class="card">
+    <h2>Still stuck?</h2>
+    <p>Send us details (device, OS, steps to reproduce) and we’ll help ASAP.</p>
+    <p><a class="btn" href="contact.html">Contact Support</a></p>
+  </div>
+</main>
 
-    <section aria-labelledby="about" style="margin-top:26px">
-      <h2 id="about" class="kicker">About the app</h2>
-      <div class="card">
-        <p><strong>Health-wise</strong> helps you track activity, sleep, mood, hydration, and more — with smart reminders and gentle insights to build sustainable habits.</p>
-        <p class="mono">Bundle ID: <code>com.deleboston.health-wise</code></p>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
+<footer class="footer">
   <div class="container">
     <div class="grid two">
       <div>
         <strong>Health-wise (Wellness)</strong>
-        <p class="muted">Support site for the Health-wise mobile app. Find FAQs, policies, and ways to contact us.</p>
+        <p class="muted">Support site for the Health-wise mobile app.</p>
       </div>
       <div>
         <p>
@@ -159,7 +88,6 @@
   </div>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
   <script>
-    // highlight current page in nav
     const map={ "index.html":"home","faq.html":"faq","privacy.html":"privacy","terms.html":"terms","contact.html":"contact" };
     const path = location.pathname.split('/').pop() || "index.html";
     const key = map[path] || null;
@@ -167,14 +95,5 @@
   </script>
 </footer>
 
-
-  <footer role="contentinfo">
-    <div class="container">
-      © <span id="y"></span> DELEBOSTON INC • Health-wise (Wellness) • <a href="contact.html">Support</a>
-    </div>
-  </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
-
-
