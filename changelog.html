@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- PWA / Manifest -->
+  <link rel="manifest" href="/health-wise-support/manifest.json">
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#001117">
+
+  <!-- iOS add-to-home-screen tweaks -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changelog · Health-wise Support</title>
+  <meta name="description" content="Release notes and recent updates for the Health-wise (Wellness) app.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header class="nav">
+    <div class="container inner">
+      <a class="brand" href="index.html">Health-wise Support</a>
+
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu">
+      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
+
+      <nav class="menu" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="faq.html" data-nav="faq">FAQs</a>
+        <a href="terms.html" data-nav="terms">Terms</a>
+        <a href="privacy.html" data-nav="privacy">Privacy</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a class="active" href="changelog.html" data-nav="changelog">Changelog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container stack">
+    <h1>Changelog</h1>
+    <p class="muted">Latest improvements, fixes, and features. Version numbers match the App Store release.</p>
+
+    <!-- Release block -->
+    <section class="card">
+      <h2>1.0.0 — Initial Release</h2>
+      <ul>
+        <li>Core tracking: activity, hydration, and nutrition.</li>
+        <li>Mood, stress, and sleep check-ins.</li>
+        <li>GPS workouts (walks, runs, routes) with low-power mode hinting.</li>
+        <li>Smart reminders and streaks.</li>
+        <li>Light & dark theme; accessibility improvements.</li>
+        <li>In-app support link to this site.</li>
+      </ul>
+      <p class="muted">Released: 2025-08-16</p>
+    </section>
+
+    <!-- Template for future releases -->
+    <section class="card">
+      <h3 class="muted">How we version</h3>
+      <p>We use <strong>SemVer</strong> (MAJOR.MINOR.PATCH). We’ll append notes here for each update.</p>
+      <pre class="code-block"><code>
+## 1.1.0 — Feature Title
+- New: ...
+- Improved: ...
+- Fixed: ...
+
+## 1.0.1 — Patch Title
+- Fixed: ...
+      </code></pre>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container stack">
+      <div class="links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="sitemap.xml">Sitemap</a>
+        <a href="about.html">About</a>
+        <a href="changelog.html" aria-current="page">Changelog</a>
+      </div>
+      <p class="muted">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- mark active nav by pathname -->
+  <script>
+    const map = { "index.html":"home","faq.html":"faq","privacy.html":"privacy","terms.html":"terms","contact.html":"contact","about.html":"about","changelog.html":"changelog" };
+    const key = map[location.pathname.split('/').pop()] || null;
+    if (key) { const el = document.querySelector(`[data-nav="${key}"]`); if (el) el.setAttribute("aria-current","page"); }
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Service worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/health-wise-support/sw.js').catch(console.error);
+    }
+  </script>
+</body>
+</html>
