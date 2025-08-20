@@ -1,0 +1,6 @@
+# Allow search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://oladeleoyeniyi84-stack.github.io/Health-wise-support/sitemap.xml
