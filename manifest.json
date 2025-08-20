@@ -1,15 +1,31 @@
 {
   "name": "Health-wise Support",
   "short_name": "Health-wise",
-  "description": "Support site for the Health-wise (Wellness) app: FAQs, troubleshooting, policies, and contact info.",
-  "start_url": "/Health-wise-support/index.html?source=pwa",
-  "scope": "/Health-wise-support/",
+  "description": "Support site for the Health-wise (Wellness) app: FAQs, troubleshooting, and contact info.",
+  "start_url": "/health-wise-support/index.html",
+  "scope": "/health-wise-support/",
   "display": "standalone",
-  "background_color": "#0b0f17",
-  "theme_color": "#0b0f17",
+  "background_color": "#001117",
+  "theme_color": "#001117",
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
     {
       "src": "icons/icon-maskable-512.png",
       "sizes": "512x512",
