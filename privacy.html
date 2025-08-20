@@ -17,14 +17,8 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-  if ("serviceWorker" in navigator) {
-    // Use the root-relative path so it works on every page
-    navigator.serviceWorker.register("/health-wise-support/sw.js").catch(console.error);
-  }
-</script>
-
-<body>
+  
+  <body>
 
   <!-- Header / Nav -->
   <header class="nav">
@@ -144,6 +138,11 @@
 
     // Footer year
     document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  
+  if ("serviceWorker" in navigator) {
+    // Use the root-relative path so it works on every page
+    navigator.serviceWorker.register("/health-wise-support/sw.js").catch(console.error);
+  }
+</script>
 </body>
 </html>
