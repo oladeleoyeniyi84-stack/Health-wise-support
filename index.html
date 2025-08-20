@@ -1,150 +1,67 @@
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0d1117">
-
-  <title>Health-wise Support</title>
-  <meta name="description" content="Support site for Health-wise (Wellness). FAQs, troubleshooting, terms, and contact info.">
-
-  <!-- Favicon -->
-  <link rel="icon" href="/icons/icon-192.png" type="image/png">
-
-  <!-- PWA Manifest -->
-  <link rel="manifest" href="/manifest.json">
-
-  <!-- Apple Touch -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Mobile-first CSS reset -->
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0d1117;
-      color: #e6edf3;
-      line-height: 1.6;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    nav, header, footer {
-      width: 100%;
-    }
-    .container {
-      width: min(100% - 2rem, 1200px);
-      margin-inline: auto;
-    }
-  </style>
-</head>
-
-
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Health-wise Support</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Support site for Health-wise (Wellness). FAQs, troubleshooting, and contact info.">
+  <meta charset="utf-8" />
+  <title>Contact Support • Health-wise Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#001117" />
+  <meta name="description" content="Contact support for Health-wise." />
+
+  <!-- PWA / icons (paths match your repo structure) -->
+  <link rel="manifest" href="/Health-wise-support/manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/Health-wise-support/icons/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="/Health-wise-support/style.css" />
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="nav" role="navigation" aria-label="Primary">
-  <div class="nav-inner">
-    <a class="brand" href="index.html">Health-wise Support</a>
-    <label for="nav-toggle" class="menu-btn" aria-label="Toggle menu">Menu</label>
-    <input type="checkbox" id="nav-toggle" hidden>
-    <div class="menu">
-      <a href="index.html" data-nav="home">Home</a>
-      <a href="faq.html" data-nav="faq">FAQs</a>
-      <a href="privacy.html" data-nav="privacy">Privacy</a>
-      <a href="terms.html" data-nav="terms">Terms</a>
-      <a href="contact.html" data-nav="contact">Contact</a>
+  <!-- Header / Nav -->
+  <header class="nav">
+    <div class="container inner">
+      <a class="brand" href="index.html">Health-wise Support</a>
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" />
+      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
+
+      <nav class="menu" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="faq.html" data-nav="faq">FAQ</a>
+        <a href="terms.html" data-nav="terms">Terms</a>
+        <a href="privacy.html" data-nav="privacy">Privacy</a>
+        <a href="contact.html" data-nav="contact" class="active">Contact</a>
+      </nav>
     </div>
-  </div>
-</nav>
+  </header>
 
-<header class="container section">
-  <div class="card">
-    <h1>Welcome to Health-wise Support</h1>
-    <p>Your hub for help articles, policies, and ways to reach our team.</p>
-    <div class="notice">Tip: Press <span class="kbd">Ctrl</span> + <span class="kbd">F</span> (or <span class="kbd">⌘</span> + <span class="kbd">F</span> on Mac) to search this page.</div>
-  </div>
-</header>
+  <!-- PAGE CONTENT -->
+  <main class="container stack">
+    <!-- keep your existing contact content here -->
+  </main>
 
-<main class="container section">
-  <div class="grid three">
-    <article class="card">
-      <h2>Quick start</h2>
-      <ol>
-        <li>Grant Motion, Fitness &amp; Location permissions on first launch.</li>
-        <li>Enable notifications for reminders.</li>
-        <li>For GPS routes, keep Low Power Mode off.</li>
-      </ol>
-    </article>
-
-    <article class="card">
-      <h2>Popular topics</h2>
-      <ul>
-        <li><a href="faq.html#permissions">Why we ask for permissions</a></li>
-        <li><a href="faq.html#sync">Sync &amp; backup</a></li>
-        <li><a href="faq.html#billing">Billing &amp; refunds</a></li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <h2>Policies</h2>
-      <p>Our commitment to your privacy and safety:</p>
-      <p><a class="btn" href="privacy.html">Read Privacy Policy</a></p>
-      <p><a class="btn secondary" href="terms.html">View Terms of Use</a></p>
-    </article>
-  </div>
-
-  <div class="card">
-    <h2>Still stuck?</h2>
-    <p>Send us details (device, OS, steps to reproduce) and we’ll help ASAP.</p>
-    <p><a class="btn" href="contact.html">Contact Support</a></p>
-  </div>
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="grid two">
-      <div>
-        <strong>Health-wise (Wellness)</strong>
-        <p class="muted">Support site for the Health-wise mobile app.</p>
+  <!-- Footer (single instance only) -->
+  <footer>
+    <div class="container stack">
+      <div class="links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="sitemap.xml">Sitemap</a>
+        <a href="contact.html">Contact</a>
       </div>
-      <div>
-        <p>
-          <a href="privacy.html">Privacy Policy</a> ·
-          <a href="terms.html">Terms of Use</a> ·
-          <a href="faq.html">FAQs</a> ·
-          <a href="contact.html">Contact</a>
-        </p>
-        <p>© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
-      </div>
+      <p class="tiny">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
-  </div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  </footer>
+
+  <!-- Active nav highlighter (works on all pages) -->
   <script>
-    const map={ "index.html":"home","faq.html":"faq","privacy.html":"privacy","terms.html":"terms","contact.html":"contact" };
-    const path = location.pathname.split('/').pop() || "index.html";
-    const key = map[path] || null;
-    if(key){ const el = document.querySelector(`.menu a[data-nav="${key}"]`); if(el){ el.setAttribute("aria-current","page"); } }
+    document.getElementById("y").textContent = new Date().getFullYear();
+    const map = { "index.html": "home", "faq.html": "faq", "privacy.html": "privacy",
+                  "terms.html": "terms", "contact.html": "contact" };
+    const key = map[location.pathname.split("/").pop()] || null;
+    if (key) {
+      const el = document.querySelector(`[data-nav="${key}"]`);
+      if (el) el.setAttribute("aria-current", "page");
+    }
   </script>
-</footer>
-
 </body>
 </html>
