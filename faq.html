@@ -19,6 +19,13 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
+  <script>
+  if ("serviceWorker" in navigator) {
+    // Use the root-relative path so it works on every page
+    navigator.serviceWorker.register("/health-wise-support/sw.js").catch(console.error);
+  }
+</script>
+
 <body>
 
   <!-- Header / Nav -->
