@@ -1,118 +1,67 @@
-<!-- Header / Nav -->
-<header class="nav">
-  <div class="container inner">
-    <div class="brand"><a href="index.html">Health-wise Support</a></div>
-
-    <input type="checkbox" id="nav-toggle" aria-label="Toggle menu">
-    <label class="hamb" for="nav-toggle" aria-hidden="true">
-      <span></span><span></span><span></span>
-    </label>
-
-    <nav class="menu" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="faq.html">FAQ</a>
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<!-- … your page-specific <main> content here … -->
-
-<!-- PWA / Manifest -->
-<link rel="manifest" href="/Health-wise-support/manifest.json">
-<meta name="theme-color" content="#0b0f17">
-
-<!-- iOS add-to-home-screen icons & behavior -->
-<link rel="apple-touch-icon" sizes="180x180" href="/Health-wise-support/icons/icon-192.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Contact Support — Health-wise</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Contact Health-wise Support.">
+  <meta charset="utf-8" />
+  <title>Contact Support • Health-wise Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#001117" />
+  <meta name="description" content="Contact support for Health-wise." />
+
+  <!-- PWA / icons (paths match your repo structure) -->
+  <link rel="manifest" href="/Health-wise-support/manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/Health-wise-support/icons/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="/Health-wise-support/style.css" />
 </head>
 <body>
 
-<nav class="nav" role="navigation" aria-label="Primary">
-  <div class="nav-inner">
-    <a class="brand" href="index.html">Health-wise Support</a>
-    <label for="nav-toggle" class="menu-btn" aria-label="Toggle menu">Menu</label>
-    <input type="checkbox" id="nav-toggle" hidden>
-    <div class="menu">
-      <a href="index.html" data-nav="home">Home</a>
-      <a href="faq.html" data-nav="faq">FAQs</a>
-      <a href="privacy.html" data-nav="privacy">Privacy</a>
-      <a href="terms.html" data-nav="terms">Terms</a>
-      <a href="contact.html" data-nav="contact">Contact</a>
+  <!-- Header / Nav -->
+  <header class="nav">
+    <div class="container inner">
+      <a class="brand" href="index.html">Health-wise Support</a>
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" />
+      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
+
+      <nav class="menu" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="faq.html" data-nav="faq">FAQ</a>
+        <a href="terms.html" data-nav="terms">Terms</a>
+        <a href="privacy.html" data-nav="privacy">Privacy</a>
+        <a href="contact.html" data-nav="contact" class="active">Contact</a>
+      </nav>
     </div>
-  </div>
-</nav>
+  </header>
 
-<main class="container section">
-  <div class="card">
-    <h1>Contact Support</h1>
-    <p>We usually respond within 1–2 business days. Include device model, OS version, and steps to reproduce any issue.</p>
+  <!-- PAGE CONTENT -->
+  <main class="container stack">
+    <!-- keep your existing contact content here -->
+  </main>
 
-    <div class="grid two">
-      <div class="card">
-        <h3>Email</h3>
-        <p><a class="btn" href="mailto:healthwise-support@deleboston.com">healthwise-support@deleboston.com</a></p>
-        <p class="muted">Or open your default mail app with a prefilled subject:</p>
-        <p><a class="btn secondary" href="mailto:healthwise-support@deleboston.com?subject=Health-wise%20Support%20Request">New Support Request</a></p>
+  <!-- Footer (single instance only) -->
+  <footer>
+    <div class="container stack">
+      <div class="links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="sitemap.xml">Sitemap</a>
+        <a href="contact.html">Contact</a>
       </div>
-
-      <div class="card">
-        <h3>Send details</h3>
-        <form onsubmit="location.href='mailto:healthwise-support@deleboston.com?subject='+encodeURIComponent(document.getElementById('subj').value)+'&body='+encodeURIComponent(document.getElementById('msg').value); return false;">
-          <label for="subj">Subject</label>
-          <input id="subj" required placeholder="Issue with reminders on iPhone 15">
-          <label for="msg">Message</label>
-          <textarea id="msg" rows="6" required placeholder="Device, OS, app version, steps to reproduce..."></textarea>
-          <p><button class="btn" type="submit">Open Email Draft</button></p>
-        </form>
-      </div>
+      <p class="tiny">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
-  </div>
-</main>
+  </footer>
 
-<footer class="footer">
-  <div class="container">
-    <div class="grid two">
-      <div><strong>Health-wise (Wellness)</strong></div>
-      <div>
-        <p><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="faq.html">FAQs</a> · <a href="contact.html">Contact</a></p>
-        <p>© <span id="y"></span> DELEBOSTON INC.</p>
-      </div>
-    </div>
-  </div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <!-- Active nav highlighter (works on all pages) -->
   <script>
-    const map={ "index.html":"home","faq.html":"faq","privacy.html":"privacy","terms.html":"terms","contact.html":"contact" };
-    const path = location.pathname.split('/').pop() || "contact.html";
-    const key = map[path] || null;
-    if(key){ const el = document.querySelector(`.menu a[data-nav="${key}"]`); if(el){ el.setAttribute("aria-current","page"); } }
+    document.getElementById("y").textContent = new Date().getFullYear();
+    const map = { "index.html": "home", "faq.html": "faq", "privacy.html": "privacy",
+                  "terms.html": "terms", "contact.html": "contact" };
+    const key = map[location.pathname.split("/").pop()] || null;
+    if (key) {
+      const el = document.querySelector(`[data-nav="${key}"]`);
+      if (el) el.setAttribute("aria-current", "page");
+    }
   </script>
-</footer>
-
 </body>
 </html>
-<!-- Footer -->
-<footer>
-  <div class="container stack">
-    <div class="links">
-      <a href="privacy.html">Privacy</a> ·
-      <a href="terms.html">Terms</a> ·
-      <a href="sitemap.xml">Sitemap</a> ·
-      <a href="contact.html">Contact</a>
-    </div>
-    <p class="mt-1">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
-  </div>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</footer>
