@@ -1,19 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Contact Support • Health-wise Support</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#001117" />
-  <meta name="description" content="Contact support for Health-wise." />
+  <!-- PWA / Manifest -->
+  <link rel="manifest" href="/health-wise-support/manifest.json">
+  <meta name="theme-color" content="#001117">
 
-  <!-- PWA / icons (paths match your repo structure) -->
-  <link rel="manifest" href="/Health-wise-support/manifest.json" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/Health-wise-support/icons/icon-192.png" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <!-- iOS add-to-home-screen icons & behavior -->
+  <link rel="apple-touch-icon" href="/health-wise-support/icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="stylesheet" href="/Health-wise-support/style.css" />
+  <meta charset="utf-8">
+  <title>Privacy Policy • Health-wise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for Health-wise (Wellness)">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -21,47 +23,120 @@
   <header class="nav">
     <div class="container inner">
       <a class="brand" href="index.html">Health-wise Support</a>
-      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" />
-      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
+
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" hidden>
+      <label class="hamb" for="nav-toggle" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
 
       <nav class="menu" aria-label="Primary">
         <a href="index.html" data-nav="home">Home</a>
-        <a href="faq.html" data-nav="faq">FAQ</a>
+        <a href="faq.html" data-nav="faq">FAQs</a>
+        <a href="privacy.html" data-nav="privacy" aria-current="page">Privacy</a>
         <a href="terms.html" data-nav="terms">Terms</a>
-        <a href="privacy.html" data-nav="privacy">Privacy</a>
-        <a href="contact.html" data-nav="contact" class="active">Contact</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- PAGE CONTENT -->
   <main class="container stack">
-    <!-- keep your existing contact content here -->
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last updated: <span id="lastUpdated">2025-08-19</span></p>
+
+    <section class="card" id="overview">
+      <h2>Overview</h2>
+      <p>
+        Health-wise (Wellness) respects your privacy. This policy explains what data we collect,
+        how we use it, and the choices you have. If anything here is unclear, contact us at
+        <a href="contact.html">Support</a>.
+      </p>
+    </section>
+
+    <section class="card" id="data-we-collect">
+      <h2>Data We Collect</h2>
+      <ul>
+        <li><strong>Account & contact</strong> (if you share it in support forms or feedback).</li>
+        <li><strong>App activity</strong> you log (e.g., steps, hydration, mood) stored locally unless you opt-in to sync.</li>
+        <li><strong>Device data</strong> such as OS version, model, and crash logs for diagnostics.</li>
+        <li><strong>Location</strong> (optional) for GPS-based workouts when enabled by you.</li>
+        <li><strong>Notifications tokens</strong> to deliver reminders you configure.</li>
+      </ul>
+      <p class="note">You control sensitive permissions (Health, Motion, Location, Notifications) in iOS Settings at any time.</p>
+    </section>
+
+    <section class="card" id="how-we-use">
+      <h2>How We Use Data</h2>
+      <ul>
+        <li>Provide core features (tracking, reminders, insights you request).</li>
+        <li>Improve reliability and performance (diagnostics & crash reports).</li>
+        <li>Respond to support requests.</li>
+        <li>Comply with legal obligations.</li>
+      </ul>
+      <p>We do <strong>not</strong> sell your data.</p>
+    </section>
+
+    <section class="card" id="storage">
+      <h2>Storage & Retention</h2>
+      <p>
+        Your logs are stored on your device by default. If you opt-in to any cloud backup or export,
+        those services’ policies apply. We retain support emails only as long as needed to assist you.
+      </p>
+    </section>
+
+    <section class="card" id="sharing">
+      <h2>Sharing</h2>
+      <p>
+        We share data only with processors necessary to run the app (e.g., crash reporting),
+        under agreements that protect your information. We may disclose information if required by law.
+      </p>
+    </section>
+
+    <section class="card" id="your-rights">
+      <h2>Your Choices & Rights</h2>
+      <ul>
+        <li>Review or delete data stored in-app.</li>
+        <li>Revoke permissions in Settings at any time.</li>
+        <li>Contact us to request correction or deletion of support records.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="children">
+      <h2>Children</h2>
+      <p>Health-wise is not directed to children under the age required by local law. Do not use the app if you are under that age.</p>
+    </section>
+
+    <section class="card" id="changes">
+      <h2>Changes to This Policy</h2>
+      <p>We may update this policy as the app evolves. We’ll change the date above and, when appropriate, notify you in-app.</p>
+    </section>
+
+    <section class="card" id="contact">
+      <h2>Contact</h2>
+      <p>Questions? Visit our <a href="contact.html">Contact Support</a> page.</p>
+    </section>
   </main>
 
-  <!-- Footer (single instance only) -->
+  <!-- Footer -->
   <footer>
     <div class="container stack">
       <div class="links">
-        <a href="privacy.html">Privacy</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
         <a href="terms.html">Terms</a>
         <a href="sitemap.xml">Sitemap</a>
         <a href="contact.html">Contact</a>
       </div>
-      <p class="tiny">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
+      <p class="muted">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Active nav highlighter (works on all pages) -->
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    const map = { "index.html": "home", "faq.html": "faq", "privacy.html": "privacy",
-                  "terms.html": "terms", "contact.html": "contact" };
-    const key = map[location.pathname.split("/").pop()] || null;
-    if (key) {
-      const el = document.querySelector(`[data-nav="${key}"]`);
-      if (el) el.setAttribute("aria-current", "page");
-    }
+    // Active nav
+    const map = { "index.html":"home","faq.html":"faq","privacy.html":"privacy","terms.html":"terms","contact.html":"contact" };
+    const key = map[location.pathname.split('/').pop()] || null;
+    if (key) { const el = document.querySelector(`[data-nav="${key}"]`); if (el) el.setAttribute("aria-current","page"); }
+
+    // Footer year
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
