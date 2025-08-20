@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Contact Support • Health-wise Support</title>
+  <title>Health-wise Support</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#001117" />
-  <meta name="description" content="Contact support for Health-wise." />
+  <meta name="description" content="Support site for the Health-wise (Wellness) app: FAQs, troubleshooting, policies, and contact." />
 
-  <!-- PWA / icons (paths match your repo structure) -->
-  <link rel="manifest" href="/Health-wise-support/manifest.json" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/Health-wise-support/icons/icon-192.png" />
+  <!-- PWA / icons -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-192.png" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <link rel="stylesheet" href="/Health-wise-support/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -21,25 +21,61 @@
   <header class="nav">
     <div class="container inner">
       <a class="brand" href="index.html">Health-wise Support</a>
+
       <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" />
       <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
 
       <nav class="menu" aria-label="Primary">
-        <a href="index.html" data-nav="home">Home</a>
+        <a href="index.html" data-nav="home" class="active">Home</a>
         <a href="faq.html" data-nav="faq">FAQ</a>
         <a href="terms.html" data-nav="terms">Terms</a>
         <a href="privacy.html" data-nav="privacy">Privacy</a>
-        <a href="contact.html" data-nav="contact" class="active">Contact</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- PAGE CONTENT -->
+  <!-- Main -->
   <main class="container stack">
-    <!-- keep your existing contact content here -->
+    <section class="hero">
+      <h1>Welcome to Health-wise Support</h1>
+      <p>Your hub for quick help, policies, and contacting our team.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Quick start</h2>
+        <ol>
+          <li>Grant Motion &amp; Fitness and Location permissions on first launch.</li>
+          <li>Enable Notifications for reminders.</li>
+          <li>For GPS routes, keep Low Power Mode off.</li>
+        </ol>
+      </article>
+
+      <article class="card">
+        <h2>Popular help topics</h2>
+        <ul>
+          <li><a href="faq.html#permissions">Fix permissions issues</a></li>
+          <li><a href="faq.html#notifications">I’m not getting reminders</a></li>
+          <li><a href="faq.html#sync">Data sync &amp; backups</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Policies</h2>
+        <p>Our policies explain data handling and your rights.</p>
+        <p><a class="btn" href="privacy.html">Privacy Policy</a> <a class="btn" href="terms.html">Terms of Use</a></p>
+      </article>
+
+      <article class="card">
+        <h2>Still stuck?</h2>
+        <p>Send us details (device, iOS version, steps to reproduce) and we’ll help.</p>
+        <p><a class="btn" href="contact.html">Contact Support</a></p>
+      </article>
+    </section>
   </main>
 
-  <!-- Footer (single instance only) -->
+  <!-- Footer -->
   <footer>
     <div class="container stack">
       <div class="links">
@@ -52,16 +88,14 @@
     </div>
   </footer>
 
-  <!-- Active nav highlighter (works on all pages) -->
+  <!-- Active nav & year -->
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
     const map = { "index.html": "home", "faq.html": "faq", "privacy.html": "privacy",
                   "terms.html": "terms", "contact.html": "contact" };
-    const key = map[location.pathname.split("/").pop()] || null;
-    if (key) {
-      const el = document.querySelector(`[data-nav="${key}"]`);
-      if (el) el.setAttribute("aria-current", "page");
-    }
+    const key = map[location.pathname.split("/").pop()] || "home";
+    const el = document.querySelector(`[data-nav="${key}"]`);
+    if (el) el.setAttribute("aria-current","page");
   </script>
 </body>
 </html>
