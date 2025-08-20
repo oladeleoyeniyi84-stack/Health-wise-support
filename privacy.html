@@ -1,95 +1,67 @@
-<!-- PWA / Manifest -->
-<link rel="manifest" href="/Health-wise-support/manifest.json">
-<meta name="theme-color" content="#0b0f17">
-
-<!-- iOS add-to-home-screen icons & behavior -->
-<link rel="apple-touch-icon" sizes="180x180" href="/Health-wise-support/icons/icon-192.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Privacy Policy — Health-wise</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Privacy policy for Health-wise (Wellness).">
+  <meta charset="utf-8" />
+  <title>Contact Support • Health-wise Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#001117" />
+  <meta name="description" content="Contact support for Health-wise." />
+
+  <!-- PWA / icons (paths match your repo structure) -->
+  <link rel="manifest" href="/Health-wise-support/manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/Health-wise-support/icons/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="/Health-wise-support/style.css" />
 </head>
 <body>
 
-<nav class="nav" role="navigation" aria-label="Primary">
-  <div class="nav-inner">
-    <a class="brand" href="index.html">Health-wise Support</a>
-    <label for="nav-toggle" class="menu-btn" aria-label="Toggle menu">Menu</label>
-    <input type="checkbox" id="nav-toggle" hidden>
-    <div class="menu">
-      <a href="index.html" data-nav="home">Home</a>
-      <a href="faq.html" data-nav="faq">FAQs</a>
-      <a href="privacy.html" data-nav="privacy">Privacy</a>
-      <a href="terms.html" data-nav="terms">Terms</a>
-      <a href="contact.html" data-nav="contact">Contact</a>
+  <!-- Header / Nav -->
+  <header class="nav">
+    <div class="container inner">
+      <a class="brand" href="index.html">Health-wise Support</a>
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" />
+      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
+
+      <nav class="menu" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="faq.html" data-nav="faq">FAQ</a>
+        <a href="terms.html" data-nav="terms">Terms</a>
+        <a href="privacy.html" data-nav="privacy">Privacy</a>
+        <a href="contact.html" data-nav="contact" class="active">Contact</a>
+      </nav>
     </div>
-  </div>
-</nav>
+  </header>
 
-<main class="container section">
-  <div class="card">
-    <h1>Privacy Policy</h1>
-    <p>Effective: <strong>Aug 16, 2025</strong></p>
-    <p class="notice">Summary: We collect only what’s needed to run the app and improve your experience. You control your data.</p>
+  <!-- PAGE CONTENT -->
+  <main class="container stack">
+    <!-- keep your existing contact content here -->
+  </main>
 
-    <h2>Information We Collect</h2>
-    <ul>
-      <li><strong>Account &amp; profile</strong> (if created): name, email.</li>
-      <li><strong>Health &amp; activity data</strong> you choose to record (steps, workouts, mood, hydration).</li>
-      <li><strong>Device data</strong>: app version, OS, crash logs.</li>
-      <li><strong>Location</strong> (optional) for GPS routes and nearby features.</li>
-    </ul>
-
-    <h2>How We Use Data</h2>
-    <ul>
-      <li>Provide core features (tracking, insights, reminders).</li>
-      <li>Sync across devices and enable backup/restore.</li>
-      <li>Diagnostics, crash reporting, and to prevent abuse.</li>
-    </ul>
-
-    <h2>Your Choices</h2>
-    <ul>
-      <li>Manage permissions anytime in system Settings.</li>
-      <li>Export or delete your data by contacting us at the address on <a href="contact.html">Contact</a>.</li>
-      <li>Opt out of analytics where offered in-app.</li>
-    </ul>
-
-    <h2>Data Retention &amp; Security</h2>
-    <p>We retain personal data only as long as necessary for the purposes above. We use industry-standard safeguards and never sell personal data.</p>
-
-    <h2>Children</h2>
-    <p>Health-wise is not directed to children under 13. If you believe a child has provided data, contact us to remove it.</p>
-
-    <h2>Contact</h2>
-    <p>Questions? <a href="contact.html">Contact Support</a>.</p>
-  </div>
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="grid two">
-      <div><strong>Health-wise (Wellness)</strong></div>
-      <div>
-        <p><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="faq.html">FAQs</a> · <a href="contact.html">Contact</a></p>
-        <p>© <span id="y"></span> DELEBOSTON INC.</p>
+  <!-- Footer (single instance only) -->
+  <footer>
+    <div class="container stack">
+      <div class="links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="sitemap.xml">Sitemap</a>
+        <a href="contact.html">Contact</a>
       </div>
+      <p class="tiny">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
-  </div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-  <script>
-    const map={ "index.html":"home","faq.html":"faq","privacy.html":"privacy","terms.html":"terms","contact.html":"contact" };
-    const path = location.pathname.split('/').pop() || "privacy.html";
-    const key = map[path] || null;
-    if(key){ const el = document.querySelector(`.menu a[data-nav="${key}"]`); if(el){ el.setAttribute("aria-current","page"); } }
-  </script>
-</footer>
+  </footer>
 
+  <!-- Active nav highlighter (works on all pages) -->
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    const map = { "index.html": "home", "faq.html": "faq", "privacy.html": "privacy",
+                  "terms.html": "terms", "contact.html": "contact" };
+    const key = map[location.pathname.split("/").pop()] || null;
+    if (key) {
+      const el = document.querySelector(`[data-nav="${key}"]`);
+      if (el) el.setAttribute("aria-current", "page");
+    }
+  </script>
 </body>
 </html>
