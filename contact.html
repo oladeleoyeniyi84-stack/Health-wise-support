@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="/health-wise-support/style.css" />
 </head>
 <body>
+  
+
 
   <!-- Header / Nav -->
   <header class="nav">
@@ -82,30 +84,24 @@
       <p class="muted">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
   </footer>
+    <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Health-wise Support</p>
+  </footer>
+    <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Health-wise Support</p>
+  </footer>
 
   <script>
-    // mark active nav based on path
-    (function () {
-      const map = {
-        "/health-wise-support/index.html": "home",
-        "/health-wise-support/faq.html": "faq",
-        "/health-wise-support/terms.html": "terms",
-        "/health-wise-support/privacy.html": "privacy",
-        "/health-wise-support/contact.html": "contact"
-      };
-      const current = location.pathname.replace(/\/$/, "/index.html");
-      const link = document.querySelector(`.menu a[href="${current}"]`);
-      if (link) link.setAttribute("aria-current", "page");
-      document.getElementById("y").textContent = new Date().getFullYear();
-    })();
-
-    // service worker (root-relative scope)
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/health-wise-support/sw.js")
-        .then(reg => console.log("SW registered:", reg.scope))
-        .catch(err => console.error("SW registration failed:", err));
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/health-wise-support/sw.js').catch(console.error);
     }
   </script>
 </body>
 </html>
+
+
+  
+
+
