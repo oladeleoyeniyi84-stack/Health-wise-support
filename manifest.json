@@ -1,36 +1,33 @@
 {
   "name": "Health-wise Support",
   "short_name": "Health-wise",
-  "description": "Support site for the Health-wise (Wellness) app: FAQs, troubleshooting, and contact info.",
+  "description": "Health-wise helps men and women track activity, nutrition, stress, and sleep with AI-powered insights and reminders.",
   "start_url": "/health-wise-support/index.html",
   "scope": "/health-wise-support/",
   "display": "standalone",
   "background_color": "#001117",
   "theme_color": "#001117",
+  "orientation": "portrait",
   "icons": [
+    {
+      "src": "icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
     {
       "src": "icons/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
+      "type": "image/png"
     },
     {
       "src": "icons/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "icons/icon-maskable-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "icons/icon-maskable-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     }
   ]
 }
