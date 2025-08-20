@@ -1,19 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Health-wise Support</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#001117" />
-  <meta name="description" content="Support site for the Health-wise (Wellness) app: FAQs, troubleshooting, policies, and contact." />
+  <!-- PWA / Manifest -->
+  <link rel="manifest" href="/health-wise-support/manifest.json">
+  <meta name="theme-color" content="#001117">
 
-  <!-- PWA / icons -->
-  <link rel="manifest" href="manifest.json" />
-  <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-192.png" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <!-- iOS add-to-home-screen icons & behavior -->
+  <link rel="apple-touch-icon" href="/health-wise-support/icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <title>Terms of Use • Health-wise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Terms of Use for Health-wise (Wellness)">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -22,56 +24,108 @@
     <div class="container inner">
       <a class="brand" href="index.html">Health-wise Support</a>
 
-      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" />
-      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" hidden>
+      <label class="hamb" for="nav-toggle" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
 
       <nav class="menu" aria-label="Primary">
-        <a href="index.html" data-nav="home" class="active">Home</a>
-        <a href="faq.html" data-nav="faq">FAQ</a>
-        <a href="terms.html" data-nav="terms">Terms</a>
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="faq.html" data-nav="faq">FAQs</a>
         <a href="privacy.html" data-nav="privacy">Privacy</a>
+        <a href="terms.html" data-nav="terms" aria-current="page">Terms</a>
         <a href="contact.html" data-nav="contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main -->
   <main class="container stack">
-    <section class="hero">
-      <h1>Welcome to Health-wise Support</h1>
-      <p>Your hub for quick help, policies, and contacting our team.</p>
+    <h1>Terms of Use</h1>
+    <p class="muted">Last updated: <span id="lastUpdated">2025-08-19</span></p>
+
+    <section class="card" id="agreement">
+      <h2>1. Agreement</h2>
+      <p>
+        By downloading, installing, or using Health-wise (Wellness) (“App”), you agree to these Terms.
+        If you do not agree, do not use the App.
+      </p>
     </section>
 
-    <section class="grid">
-      <article class="card">
-        <h2>Quick start</h2>
-        <ol>
-          <li>Grant Motion &amp; Fitness and Location permissions on first launch.</li>
-          <li>Enable Notifications for reminders.</li>
-          <li>For GPS routes, keep Low Power Mode off.</li>
-        </ol>
-      </article>
+    <section class="card" id="license">
+      <h2>2. License</h2>
+      <p>
+        We grant you a personal, non-transferable, revocable license to use the App on devices you own
+        or control, subject to these Terms and the App Store Terms.
+      </p>
+    </section>
 
-      <article class="card">
-        <h2>Popular help topics</h2>
-        <ul>
-          <li><a href="faq.html#permissions">Fix permissions issues</a></li>
-          <li><a href="faq.html#notifications">I’m not getting reminders</a></li>
-          <li><a href="faq.html#sync">Data sync &amp; backups</a></li>
-        </ul>
-      </article>
+    <section class="card" id="use">
+      <h2>3. Acceptable Use</h2>
+      <ul>
+        <li>Do not reverse engineer, decompile, or modify the App.</li>
+        <li>Do not use the App for unlawful purposes or to infringe others’ rights.</li>
+        <li>Do not attempt to access data without consent.</li>
+      </ul>
+    </section>
 
-      <article class="card">
-        <h2>Policies</h2>
-        <p>Our policies explain data handling and your rights.</p>
-        <p><a class="btn" href="privacy.html">Privacy Policy</a> <a class="btn" href="terms.html">Terms of Use</a></p>
-      </article>
+    <section class="card" id="health-disclaimer">
+      <h2>4. Health Disclaimer</h2>
+      <p>
+        The App provides informational and tracking tools only and is not a substitute for professional
+        medical advice, diagnosis, or treatment. Seek advice from a qualified healthcare provider for
+        medical questions. Use at your own discretion.
+      </p>
+    </section>
 
-      <article class="card">
-        <h2>Still stuck?</h2>
-        <p>Send us details (device, iOS version, steps to reproduce) and we’ll help.</p>
-        <p><a class="btn" href="contact.html">Contact Support</a></p>
-      </article>
+    <section class="card" id="privacy">
+      <h2>5. Privacy</h2>
+      <p>
+        Your use of the App is also governed by our <a href="privacy.html">Privacy Policy</a>, which explains
+        what we collect and how we use it.
+      </p>
+    </section>
+
+    <section class="card" id="subscriptions">
+      <h2>6. Purchases & Subscriptions</h2>
+      <p>
+        If future versions include paid features, billing and refund handling will be managed by the platform
+        provider (Apple). Prices and terms will be shown in-app before purchase.
+      </p>
+    </section>
+
+    <section class="card" id="ip">
+      <h2>7. Intellectual Property</h2>
+      <p>
+        The App and all related materials are owned by DELEBOSTON INC. or its licensors and protected by law.
+      </p>
+    </section>
+
+    <section class="card" id="warranty">
+      <h2>8. Warranty Disclaimer</h2>
+      <p>
+        The App is provided “AS IS” and “AS AVAILABLE” without warranties of any kind, express or implied,
+        including fitness for a particular purpose and non-infringement.
+      </p>
+    </section>
+
+    <section class="card" id="liability">
+      <h2>9. Limitation of Liability</h2>
+      <p>
+        To the maximum extent permitted by law, DELEBOSTON INC. shall not be liable for indirect, incidental,
+        special, consequential, or punitive damages arising from your use of the App.
+      </p>
+    </section>
+
+    <section class="card" id="changes">
+      <h2>10. Changes</h2>
+      <p>
+        We may update these Terms. Continued use after changes means you accept the updated Terms.
+      </p>
+    </section>
+
+    <section class="card" id="contact">
+      <h2>11. Contact</h2>
+      <p>Questions about these Terms? Visit our <a href="contact.html">Contact Support</a> page.</p>
     </section>
   </main>
 
@@ -80,22 +134,22 @@
     <div class="container stack">
       <div class="links">
         <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="terms.html" aria-current="page">Terms</a>
         <a href="sitemap.xml">Sitemap</a>
         <a href="contact.html">Contact</a>
       </div>
-      <p class="tiny">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
+      <p class="muted">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Active nav & year -->
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    const map = { "index.html": "home", "faq.html": "faq", "privacy.html": "privacy",
-                  "terms.html": "terms", "contact.html": "contact" };
-    const key = map[location.pathname.split("/").pop()] || "home";
-    const el = document.querySelector(`[data-nav="${key}"]`);
-    if (el) el.setAttribute("aria-current","page");
+    // Active nav
+    const map = { "index.html":"home","faq.html":"faq","privacy.html":"privacy","terms.html":"terms","contact.html":"contact" };
+    const key = map[location.pathname.split('/').pop()] || null;
+    if (key) { const el = document.querySelector(`[data-nav="${key}"]`); if (el) el.setAttribute("aria-current","page"); }
+
+    // Footer year
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
