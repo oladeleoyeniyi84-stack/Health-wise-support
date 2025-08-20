@@ -1,87 +1,67 @@
-<!-- PWA / Manifest -->
-<link rel="manifest" href="/Health-wise-support/manifest.json">
-<meta name="theme-color" content="#0b0f17">
-
-<!-- iOS add-to-home-screen icons & behavior -->
-<link rel="apple-touch-icon" sizes="180x180" href="/Health-wise-support/icons/icon-192.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Terms of Use — Health-wise</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Terms of Use for Health-wise (Wellness).">
+  <meta charset="utf-8" />
+  <title>Contact Support • Health-wise Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#001117" />
+  <meta name="description" content="Contact support for Health-wise." />
+
+  <!-- PWA / icons (paths match your repo structure) -->
+  <link rel="manifest" href="/Health-wise-support/manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/Health-wise-support/icons/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="/Health-wise-support/style.css" />
 </head>
 <body>
 
-<nav class="nav" role="navigation" aria-label="Primary">
-  <div class="nav-inner">
-    <a class="brand" href="index.html">Health-wise Support</a>
-    <label for="nav-toggle" class="menu-btn" aria-label="Toggle menu">Menu</label>
-    <input type="checkbox" id="nav-toggle" hidden>
-    <div class="menu">
-      <a href="index.html" data-nav="home">Home</a>
-      <a href="faq.html" data-nav="faq">FAQs</a>
-      <a href="privacy.html" data-nav="privacy">Privacy</a>
-      <a href="terms.html" data-nav="terms">Terms</a>
-      <a href="contact.html" data-nav="contact">Contact</a>
+  <!-- Header / Nav -->
+  <header class="nav">
+    <div class="container inner">
+      <a class="brand" href="index.html">Health-wise Support</a>
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" />
+      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
+
+      <nav class="menu" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="faq.html" data-nav="faq">FAQ</a>
+        <a href="terms.html" data-nav="terms">Terms</a>
+        <a href="privacy.html" data-nav="privacy">Privacy</a>
+        <a href="contact.html" data-nav="contact" class="active">Contact</a>
+      </nav>
     </div>
-  </div>
-</nav>
+  </header>
 
-<main class="container section">
-  <div class="card">
-    <h1>Terms of Use</h1>
-    <p>Effective: <strong>Aug 16, 2025</strong></p>
+  <!-- PAGE CONTENT -->
+  <main class="container stack">
+    <!-- keep your existing contact content here -->
+  </main>
 
-    <h2>1. Agreement</h2>
-    <p>By downloading or using Health-wise you agree to these terms and our <a href="privacy.html">Privacy Policy</a>.</p>
-
-    <h2>2. License</h2>
-    <p>We grant you a personal, non-transferable, revocable license to use the app for its intended purpose.</p>
-
-    <h2>3. Medical Disclaimer</h2>
-    <p class="notice warn">Health-wise provides wellness information only and is not a substitute for medical advice. Consult a qualified professional for health concerns.</p>
-
-    <h2>4. User Content</h2>
-    <p>You’re responsible for the data you submit. Don’t upload unlawful or harmful content.</p>
-
-    <h2>5. Fees &amp; Subscriptions</h2>
-    <p>Paid plans (if any) are billed via App Store/Play billing and subject to their terms. Cancel renewals in your store account settings.</p>
-
-    <h2>6. Limitation of Liability</h2>
-    <p>To the fullest extent permitted by law, we are not liable for indirect or consequential damages arising from use of the app.</p>
-
-    <h2>7. Changes</h2>
-    <p>We may update these terms. We’ll post the new date above.</p>
-
-    <h2>8. Contact</h2>
-    <p>Questions about these terms? <a href="contact.html">Contact Support</a>.</p>
-  </div>
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="grid two">
-      <div><strong>Health-wise (Wellness)</strong></div>
-      <div>
-        <p><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="faq.html">FAQs</a> · <a href="contact.html">Contact</a></p>
-        <p>© <span id="y"></span> DELEBOSTON INC.</p>
+  <!-- Footer (single instance only) -->
+  <footer>
+    <div class="container stack">
+      <div class="links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="sitemap.xml">Sitemap</a>
+        <a href="contact.html">Contact</a>
       </div>
+      <p class="tiny">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
-  </div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-  <script>
-    const map={ "index.html":"home","faq.html":"faq","privacy.html":"privacy","terms.html":"terms","contact.html":"contact" };
-    const path = location.pathname.split('/').pop() || "terms.html";
-    const key = map[path] || null;
-    if(key){ const el = document.querySelector(`.menu a[data-nav="${key}"]`); if(el){ el.setAttribute("aria-current","page"); } }
-  </script>
-</footer>
+  </footer>
 
+  <!-- Active nav highlighter (works on all pages) -->
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    const map = { "index.html": "home", "faq.html": "faq", "privacy.html": "privacy",
+                  "terms.html": "terms", "contact.html": "contact" };
+    const key = map[location.pathname.split("/").pop()] || null;
+    if (key) {
+      const el = document.querySelector(`[data-nav="${key}"]`);
+      if (el) el.setAttribute("aria-current", "page");
+    }
+  </script>
 </body>
 </html>
