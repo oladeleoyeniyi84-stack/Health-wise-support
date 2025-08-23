@@ -1,71 +1,43 @@
 <!doctype html>
 <html lang="en">
 <head>
-<link rel="manifest" href="/health-wise-support/manifest.json">
-<link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png">
-<meta name="theme-color" content="#001117">
-
   <meta charset="utf-8" />
-  <title>Health-wise Support</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Health-wise Support</title>
+  <meta name="description" content="Your hub for quick help, policies, and contacting our team." />
   <meta name="theme-color" content="#001117" />
-  <meta name="description" content="Support site for the Health-wise (Wellness) app: FAQs, troubleshooting, policies, and contact." />
 
-  <!-- PWA / icons -->
---- a/index.html
-+++ b/index.html
-@@
--  <link rel="manifest" href="/health-wise-support/manifest.json">
--  <link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml">
--  <link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png">
-+  <link rel="manifest" href="manifest.json">
-+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
-+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-   <meta name="theme-color" content="#001117">
--  <link rel="stylesheet" href="/health-wise-support/style.css">
-+  <link rel="stylesheet" href="style.css">
- </head>
--<body>
-+<body>
-@@
--  <!-- (if you had an earlier SW block in <head>, it will be removed) -->
-+  <!-- Service worker (register from repo-relative path) -->
-+  <script>
-+    if ('serviceWorker' in navigator) {
-+      navigator.serviceWorker.register('sw.js')
-+        .catch(console.error);
-+    }
-+  </script>
- </body>
+  <!-- PWA / Icons -->
+  <link rel="manifest" href="/health-wise-support/manifest.json" />
+  <link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-
+  <link rel="stylesheet" href="/health-wise-support/style.css" />
+</head>
 <body>
 
   <!-- Header / Nav -->
   <header class="nav">
     <div class="container inner">
-      <a class="brand" href="index.html">Health-wise Support</a>
-
-      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" />
+      <a class="brand" href="/health-wise-support/index.html" aria-current="page">Health-wise Support</a>
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" hidden />
       <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
-
       <nav class="menu" aria-label="Primary">
-        <a href="index.html" data-nav="home" class="active">Home</a>
-        <a href="faq.html" data-nav="faq">FAQ</a>
-        <a href="terms.html" data-nav="terms">Terms</a>
-        <a href="privacy.html" data-nav="privacy">Privacy</a>
-        <a href="contact.html" data-nav="contact">Contact</a>
+        <a href="/health-wise-support/index.html" aria-current="page">Home</a>
+        <a href="/health-wise-support/faq.html">FAQ</a>
+        <a href="/health-wise-support/terms.html">Terms</a>
+        <a href="/health-wise-support/privacy.html">Privacy</a>
+        <a href="/health-wise-support/contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main -->
-  <main class="container stack">
-    <section class="hero">
-      <h1>Welcome to Health-wise Support</h1>
-      <p>Your hub for quick help, policies, and contacting our team.</p>
-    </section>
+  <!-- Hero -->
+  <main class="container pad">
+    <h1>Welcome to Health-wise Support</h1>
+    <p>Your hub for quick help, policies, and contacting our team.</p>
 
     <section class="grid">
       <article class="card">
@@ -80,23 +52,25 @@
       <article class="card">
         <h2>Popular help topics</h2>
         <ul>
-          <li><a href="faq.html#permissions">Fix permissions issues</a></li>
-          <li><a href="faq.html#notifications">I’m not getting reminders</a></li>
-          <li><a href="faq.html#sync">Data sync &amp; backups</a></li>
+          <li><a href="/health-wise-support/faq.html#permissions">Fix permissions issues</a></li>
+          <li><a href="/health-wise-support/faq.html#reminders">I’m not getting reminders</a></li>
+          <li><a href="/health-wise-support/faq.html#sync">Data sync &amp; backups</a></li>
         </ul>
       </article>
 
       <article class="card">
         <h2>Policies</h2>
         <p>Our policies explain data handling and your rights.</p>
-        <p><a class="btn" href="privacy.html">Privacy Policy</a> <a class="btn" href="terms.html">Terms of Use</a></p>
+        <p>
+          <a class="btn" href="/health-wise-support/privacy.html">Privacy Policy</a>
+          <a class="btn ghost" href="/health-wise-support/terms.html">Terms of Use</a>
+        </p>
       </article>
+    </section>
 
-      <article class="card">
-        <h2>Still stuck?</h2>
-        <p>Send us details (device, iOS version, steps to reproduce) and we’ll help.</p>
-        <p><a class="btn" href="contact.html">Contact Support</a></p>
-      </article>
+    <section class="card">
+      <h2>Still stuck?</h2>
+      <p>Email us at <a href="mailto:support@deleboston.com">support@deleboston.com</a> and we’ll help.</p>
     </section>
   </main>
 
@@ -104,23 +78,21 @@
   <footer>
     <div class="container stack">
       <div class="links">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="sitemap.xml">Sitemap</a>
-        <a href="contact.html">Contact</a>
+        <a href="/health-wise-support/privacy.html">Privacy</a>
+        <a href="/health-wise-support/terms.html">Terms</a>
+        <a href="/health-wise-support/sitemap.xml">Sitemap</a>
+        <a href="/health-wise-support/contact.html">Contact</a>
       </div>
-      <p class="tiny">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
+    <p class="muted">© 2025 Health-wise Support / DELEBOSTON INC. All rights reserved.</p>
   </footer>
 
-  <!-- Active nav & year -->
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    const map = { "index.html": "home", "faq.html": "faq", "privacy.html": "privacy",
-                  "terms.html": "terms", "contact.html": "contact" };
-    const key = map[location.pathname.split("/").pop()] || "home";
-    const el = document.querySelector(`[data-nav="${key}"]`);
-    if (el) el.setAttribute("aria-current","page");
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/health-wise-support/sw.js')
+        .then(reg => console.log('SW registered:', reg.scope))
+        .catch(err => console.error('SW registration failed:', err));
+    }
   </script>
 </body>
 </html>
