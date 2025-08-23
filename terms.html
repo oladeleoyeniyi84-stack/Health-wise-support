@@ -8,14 +8,10 @@
   <meta name="theme-color" content="#001117" />
 
   <!-- PWA / Icons -->
-  <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
+ +  <link rel="manifest" href="/Health-wise-support/manifest.json" />
++  <link rel="icon" href="/Health-wise-support/icons/favicon.svg" type="image/svg+xml" />
++  <link rel="apple-touch-icon" href="/Health-wise-support/icons/apple-touch-icon.png" />
+   <meta name="theme-color" content="#001117" />
 </head>
 <body>
   <!-- Header -->
@@ -69,12 +65,12 @@
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js')
-        .then(reg => console.log('SW registered:', reg.scope))
-        .catch(err => console.error('SW register failed:', err));
-    }
-  </script>
+     if ('serviceWorker' in navigator) {
+-      navigator.serviceWorker.register('/health-wise-support/sw.js')
++      navigator.serviceWorker.register('/Health-wise-support/sw.js')
+         .then(reg => console.log('SW registered:', reg.scope))
+         .catch(err => console.error('SW register failed:', err));
+     }
+   </script>
 </body>
 </html>
