@@ -3,34 +3,33 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FAQ — Health-wise Support</title>
-  <meta name="description" content="Common questions and troubleshooting for Health-wise (Wellness)." />
+  <title>FAQ · Health-wise Support</title>
+  <meta name="description" content="Frequently asked questions for Health-wise Support." />
   <meta name="theme-color" content="#001117" />
 
-  <!-- PWA / icons -->
-  <link rel="manifest" href="/health-wise-support/manifest.json" />
-  <link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png" />
+  <!-- PWA / Icons -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/health-wise-support/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header / Nav -->
+  <!-- Header -->
   <header class="nav">
     <div class="container inner">
-      <a class="brand" href="/health-wise-support/index.html">Health-wise Support</a>
+      <a class="brand" href="index.html">Health-wise Support</a>
       <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" hidden />
-      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span><span></span></label>
-
+      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
       <nav class="menu" aria-label="Primary">
-        <a href="/health-wise-support/index.html">Home</a>
-        <a href="/health-wise-support/faq.html" aria-current="page">FAQ</a>
-        <a href="/health-wise-support/terms.html">Terms</a>
-        <a href="/health-wise-support/privacy.html">Privacy</a>
-        <a href="/health-wise-support/contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="faq.html" aria-current="page">FAQ</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -39,33 +38,19 @@
   <main class="container pad">
     <h1>Frequently Asked Questions</h1>
 
-    <section id="permissions" class="card">
-      <h2>How do I grant Motion &amp; Fitness and Location permissions?</h2>
-      <p>Open the Health-wise app &gt; follow the setup prompts. You can also enable later from your device Settings:</p>
-      <ul>
-        <li><strong>iOS:</strong> Settings → Privacy &amp; Security → Motion &amp; Fitness / Location Services.</li>
-        <li><strong>Android:</strong> Settings → Apps → Health-wise → Permissions.</li>
-      </ul>
+    <section class="faq card" id="permissions">
+      <h2>Why does the app need motion &amp; location access?</h2>
+      <p>These permissions are required to provide accurate health and fitness tracking.</p>
     </section>
 
-    <section id="reminders" class="card">
-      <h2>Why am I not receiving reminders?</h2>
-      <ul>
-        <li>Confirm Notifications are enabled for Health-wise.</li>
-        <li>Disable Focus/Do Not Disturb during reminder times.</li>
-        <li>Keep Low Power Mode off for reliable scheduling.</li>
-      </ul>
+    <section class="faq card" id="reminders">
+      <h2>Why am I not getting reminders?</h2>
+      <p>Ensure notifications are enabled in both system settings and the app’s preferences.</p>
     </section>
 
-    <section id="backup" class="card">
-      <h2>How do I back up my data?</h2>
-      <p>Health-wise syncs your key preferences securely. For exports or account-level help, contact us via the <a href="/health-wise-support/contact.html">contact form</a>.</p>
-    </section>
-
-    <section class="card">
-      <h2>Still stuck?</h2>
-      <p>Send us details (device, OS, steps to reproduce) and we'll help quickly.</p>
-      <p><a class="btn" href="/health-wise-support/contact.html">Contact Support</a></p>
+    <section class="faq card" id="sync">
+      <h2>How do I back up or sync my data?</h2>
+      <p>Your data automatically syncs to your Health-wise account when connected to Wi-Fi.</p>
     </section>
   </main>
 
@@ -73,19 +58,19 @@
   <footer>
     <div class="container stack">
       <div class="links">
-        <a href="/health-wise-support/privacy.html">Privacy</a>
-        <a href="/health-wise-support/terms.html">Terms</a>
-        <a href="/health-wise-support/sitemap.xml">Sitemap</a>
-        <a href="/health-wise-support/contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="sitemap.xml">Sitemap</a>
+        <a href="contact.html">Contact</a>
       </div>
       <p class="muted">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/health-wise-support/sw.js')
+      navigator.serviceWorker.register('sw.js')
         .then(reg => console.log('SW registered:', reg.scope))
         .catch(err => console.error('SW register failed:', err));
     }
