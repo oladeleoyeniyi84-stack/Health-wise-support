@@ -21,10 +21,11 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-  if ("serviceWorker" in navigator) {
-    // Use the root-relative path so it works on every page
-    navigator.serviceWorker.register("/health-wise-support/sw.js").catch(console.error);
+ <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/health-wise-support/sw.js')
+      .then(reg => console.log('SW registered:', reg.scope))
+      .catch(err => console.error('SW register failed:', err));
   }
 </script>
 
