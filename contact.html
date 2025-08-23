@@ -73,8 +73,7 @@
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer>
+  <!-- Footer -->  <footer>
     <div class="container stack">
       <div class="links">
         <a href="/health-wise-support/privacy.html">Privacy</a>
@@ -82,28 +81,21 @@
         <a href="/health-wise-support/sitemap.xml">Sitemap</a>
         <a href="/health-wise-support/contact.html">Contact</a>
       </div>
-      <p class="muted">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
-  </footer>
-    <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Health-wise Support</p>
-  </footer>
-    <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Health-wise Support</p>
+    <p class="muted">© 2025 Health-wise Support / DELEBOSTON INC. All rights reserved.</p>
   </footer>
 
- <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/health-wise-support/sw.js')
-      .then(reg => console.log('SW registered:', reg.scope))
-      .catch(err => console.error('SW register failed:', err));
-  }
-</script>
-
+  <!-- Service Worker registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/health-wise-support/sw.js')
+        .then(reg => console.log('SW registered:', reg.scope))
+        .catch(err => console.error('SW registration failed:', err));
+    }
+  </script>
 </body>
 </html>
+
 
 
   
