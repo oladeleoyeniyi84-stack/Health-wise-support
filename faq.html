@@ -3,22 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FAQ · Health-wise Support</title>
+  <title>FAQ • Health-wise Support</title>
   <meta name="description" content="Frequently asked questions for Health-wise Support." />
   <meta name="theme-color" content="#001117" />
 
   <!-- PWA / Icons -->
--  <link rel="manifest" href="/health-wise-support/manifest.json" />
--  <link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml" />
--  <link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png" />
-+  <link rel="manifest" href="/Health-wise-support/manifest.json" />
-+  <link rel="icon" href="/Health-wise-support/icons/favicon.svg" type="image/svg+xml" />
-+  <link rel="apple-touch-icon" href="/Health-wise-support/icons/apple-touch-icon.png" />
-   <meta name="theme-color" content="#001117" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header class="nav">
     <div class="container inner">
       <a class="brand" href="index.html">Health-wise Support</a>
+
       <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" hidden />
-      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
+      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span><span></span></label>
+
       <nav class="menu" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="faq.html" aria-current="page">FAQ</a>
@@ -31,21 +38,35 @@
 
   <!-- Main -->
   <main class="container pad">
-    <h1>Frequently Asked Questions</h1>
+    <h1>FAQ</h1>
+    <p class="muted">Quick answers to common questions.</p>
 
-    <section class="faq card" id="permissions">
-      <h2>Why does the app need motion &amp; location access?</h2>
-      <p>These permissions are required to provide accurate health and fitness tracking.</p>
+    <section id="permissions" class="card">
+      <h2>Why do you need Motion &amp; Fitness and Location?</h2>
+      <p>We use these permissions to track activity and routes for wellness features. You can manage them in iOS Settings &gt; Privacy &amp; Security.</p>
+      <ul>
+        <li><strong>Motion &amp; Fitness:</strong> Daily activity &amp; steps.</li>
+        <li><strong>Location:</strong> Accurate GPS for walking/jogging routes.</li>
+      </ul>
     </section>
 
-    <section class="faq card" id="reminders">
-      <h2>Why am I not getting reminders?</h2>
-      <p>Ensure notifications are enabled in both system settings and the app’s preferences.</p>
+    <section id="notifications" class="card">
+      <h2>I’m not getting reminders</h2>
+      <ol>
+        <li>Open iOS Settings &gt; Notifications &gt; Health-wise and allow alerts.</li>
+        <li>Disable Focus/Do Not Disturb during reminder times.</li>
+        <li>Ensure Low Power Mode is off for background delivery.</li>
+      </ol>
     </section>
 
-    <section class="faq card" id="sync">
-      <h2>How do I back up or sync my data?</h2>
-      <p>Your data automatically syncs to your Health-wise account when connected to Wi-Fi.</p>
+    <section id="sync" class="card">
+      <h2>Data sync &amp; backups</h2>
+      <p>Health-wise uses on-device storage and iCloud (when available) for backups. Sign in with the same Apple ID to restore.</p>
+    </section>
+
+    <section class="card">
+      <h2>Contact support</h2>
+      <p>Didn’t find what you need? <a href="contact.html">Send us a message</a>.</p>
     </section>
   </main>
 
@@ -58,17 +79,17 @@
         <a href="sitemap.xml">Sitemap</a>
         <a href="contact.html">Contact</a>
       </div>
-      <p class="muted">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
+      <p class="muted">&copy; <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
   </footer>
 
-   <script>
-     if ('serviceWorker' in navigator) {
--      navigator.serviceWorker.register('/health-wise-support/sw.js')
-+      navigator.serviceWorker.register('/Health-wise-support/sw.js')
-         .then(reg => console.log('SW registered:', reg.scope))
-         .catch(err => console.error('SW register failed:', err));
-     }
-   </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('SW registered:', reg.scope))
+        .catch(err => console.error('SW registration failed:', err));
+    }
+  </script>
 </body>
 </html>
