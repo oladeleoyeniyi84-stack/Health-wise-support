@@ -1,106 +1,66 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- PWA / Manifest -->
-<link rel="manifest" href="/health-wise-support/manifest.json">
-<link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png">
-<meta name="theme-color" content="#001117">
-
-
-  <!-- iOS add-to-home-screen tweaks -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About · Health-wise Support</title>
-  <meta name="description" content="About Health-wise (Wellness): mission, features, and contact details.">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="About Health-wise (Wellness) and the team behind it." />
+  <meta name="theme-color" content="#001117" />
+
+  <link rel="manifest" href="/health-wise-support/manifest.json" />
+  <link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="/health-wise-support/style.css" />
 </head>
 <body>
-
-  <!-- Header / Nav -->
   <header class="nav">
     <div class="container inner">
-      <a class="brand" href="index.html">Health-wise Support</a>
-
-      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu">
+      <a class="brand" href="/health-wise-support/index.html">Health-wise Support</a>
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" hidden />
       <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
-
       <nav class="menu" aria-label="Primary">
-        <a href="index.html" data-nav="home">Home</a>
-        <a href="faq.html" data-nav="faq">FAQs</a>
-        <a href="terms.html" data-nav="terms">Terms</a>
-        <a href="privacy.html" data-nav="privacy">Privacy</a>
-        <a href="contact.html" data-nav="contact">Contact</a>
-        <a class="active" href="about.html" data-nav="about">About</a>
-        <a href="changelog.html" data-nav="changelog">Changelog</a>
+        <a href="/health-wise-support/index.html">Home</a>
+        <a href="/health-wise-support/faq.html">FAQ</a>
+        <a href="/health-wise-support/terms.html">Terms</a>
+        <a href="/health-wise-support/privacy.html">Privacy</a>
+        <a href="/health-wise-support/contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="container stack">
-    <h1>About Health-wise (Wellness)</h1>
-    <p>
-      Health-wise is a simple, privacy-respecting companion that helps you build sustainable habits:
-      activity tracking, hydration & nutrition logs, mood & sleep check-ins, GPS workouts, and smart reminders.
-      Our goal is to make everyday wellness **clear, personalized, and sustainable**.
-    </p>
-
-    <section class="card">
-      <h2>Key principles</h2>
-      <ul>
-        <li>🔒 <strong>Privacy first</strong>: minimal data collection; you stay in control.</li>
-        <li>🎯 <strong>Useful by default</strong>: fast onboarding; sensible defaults.</li>
-        <li>🤖 <strong>Helpful AI</strong>: concise insights—not noise.</li>
-        <li>♿ <strong>Accessible</strong>: readable typography, strong contrast, screen-reader friendly.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Support & feedback</h2>
-      <p>
-        Stuck or have a suggestion? Visit <a href="contact.html">Contact Support</a> or email:
-        <a href="mailto:oladeleoyeniyi84@gmail.com">oladeleoyeniyi84@gmail.com</a>.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>Legal</h2>
-      <p>
-        Please review our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.
-      </p>
-    </section>
+  <main class="container pad prose">
+    <h1>About Health-wise</h1>
+    <p><strong>Health-wise (Wellness)</strong> is your all-in-one companion for building sustainable habits across activity, sleep, mood, and more — with optional AI-driven insights to keep you on track.</p>
+    <h2>Our principles</h2>
+    <ul>
+      <li><strong>Privacy first.</strong> You’re in control of your data.</li>
+      <li><strong>Clarity.</strong> Clean design and simple choices.</li>
+      <li><strong>Evidence-informed.</strong> Features shaped by wellness best practices.</li>
+    </ul>
+    <h2>Support</h2>
+    <p>For help, see our <a href="/health-wise-support/faq.html">FAQ</a> or email <a href="mailto:support@deleboston.com">support@deleboston.com</a>.</p>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="container stack">
       <div class="links">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="sitemap.xml">Sitemap</a>
-        <a href="about.html" aria-current="page">About</a>
-        <a href="changelog.html">Changelog</a>
+        <a href="/health-wise-support/privacy.html">Privacy</a>
+        <a href="/health-wise-support/terms.html">Terms</a>
+        <a href="/health-wise-support/sitemap.xml">Sitemap</a>
+        <a href="/health-wise-support/contact.html">Contact</a>
       </div>
-      <p class="muted">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
+    <p class="muted">© 2025 Health-wise Support / DELEBOSTON INC. All rights reserved.</p>
   </footer>
 
-  <!-- mark active nav by pathname -->
   <script>
-    const map = { "index.html":"home","faq.html":"faq","privacy.html":"privacy","terms.html":"terms","contact.html":"contact","about.html":"about","changelog.html":"changelog" };
-    const key = map[location.pathname.split('/').pop()] || null;
-    if (key) { const el = document.querySelector(`[data-nav="${key}"]`); if (el) el.setAttribute("aria-current","page"); }
-    document.getElementById('y').textContent = new Date().getFullYear();
-  <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/health-wise-support/sw.js')
-      .then(reg => console.log('SW registered:', reg.scope))
-      .catch(err => console.error('SW register failed:', err));
-  }
-</script>
-
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/health-wise-support/sw.js')
+        .catch(err => console.error('SW registration failed:', err));
+    }
+  </script>
 </body>
 </html>
