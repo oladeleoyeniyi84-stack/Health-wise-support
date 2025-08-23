@@ -1,21 +1,78 @@
---- a/privacy.html
-+++ b/privacy.html
-@@
--  <link rel="manifest" href="/health-wise-support/manifest.json">
--  <link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml">
--  <link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png">
-+  <link rel="manifest" href="manifest.json">
-+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
-+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-   <meta name="theme-color" content="#001117">
--  <link rel="stylesheet" href="/health-wise-support/style.css">
-+  <link rel="stylesheet" href="style.css">
- </head>
- <body>
-@@
-+  <script>
-+    if ('serviceWorker' in navigator) {
-+      navigator.serviceWorker.register('sw.js').catch(console.error);
-+    }
-+  </script>
- </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy · Health-wise</title>
+  <meta name="description" content="Privacy policy for Health-wise (Wellness)." />
+  <meta name="theme-color" content="#001117" />
+
+  <link rel="manifest" href="/health-wise-support/manifest.json" />
+  <link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="/health-wise-support/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container inner">
+      <a class="brand" href="/health-wise-support/index.html">Health-wise Support</a>
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" hidden />
+      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
+      <nav class="menu" aria-label="Primary">
+        <a href="/health-wise-support/index.html">Home</a>
+        <a href="/health-wise-support/faq.html">FAQ</a>
+        <a href="/health-wise-support/terms.html">Terms</a>
+        <a href="/health-wise-support/privacy.html" aria-current="page">Privacy</a>
+        <a href="/health-wise-support/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container pad prose">
+    <h1>Privacy Policy</h1>
+    <p>Effective date: <strong>August 2025</strong></p>
+    <h2>What we collect</h2>
+    <ul>
+      <li>App usage data (crash logs, basic analytics).</li>
+      <li>Optional wellness inputs you provide (e.g., mood notes).</li>
+    </ul>
+    <h2>How we use data</h2>
+    <ul>
+      <li>To operate and improve the app’s features and reliability.</li>
+      <li>To provide optional, customized insights you opt into.</li>
+    </ul>
+    <h2>Your controls</h2>
+    <ul>
+      <li>Revoke permissions at any time in iOS Settings.</li>
+      <li>Delete locally stored data by reinstalling the app.</li>
+      <li>Request account/data questions via <a href="mailto:support@deleboston.com">support@deleboston.com</a>.</li>
+    </ul>
+    <h2>Third-party services</h2>
+    <p>We may use privacy-respecting analytics and crash reporting. No data is sold.</p>
+    <h2>Contact</h2>
+    <p>Email us: <a href="mailto:support@deleboston.com">support@deleboston.com</a></p>
+  </main>
+
+  <footer>
+    <div class="container stack">
+      <div class="links">
+        <a href="/health-wise-support/privacy.html" aria-current="page">Privacy</a>
+        <a href="/health-wise-support/terms.html">Terms</a>
+        <a href="/health-wise-support/sitemap.xml">Sitemap</a>
+        <a href="/health-wise-support/contact.html">Contact</a>
+      </div>
+    </div>
+    <p class="muted">© 2025 Health-wise Support / DELEBOSTON INC. All rights reserved.</p>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/health-wise-support/sw.js')
+        .catch(err => console.error('SW registration failed:', err));
+    }
+  </script>
+</body>
+</html>
