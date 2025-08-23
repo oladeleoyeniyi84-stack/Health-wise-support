@@ -1,106 +1,77 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- PWA / Manifest -->
-<link rel="manifest" href="/health-wise-support/manifest.json">
-<link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png">
-<meta name="theme-color" content="#001117">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Changelog · Health-wise</title>
+  <meta name="description" content="Release notes and updates for Health-wise (Wellness)." />
+  <meta name="theme-color" content="#001117" />
 
+  <link rel="manifest" href="/health-wise-support/manifest.json" />
+  <link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <!-- iOS add-to-home-screen tweaks -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Changelog · Health-wise Support</title>
-  <meta name="description" content="Release notes and recent updates for the Health-wise (Wellness) app.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/health-wise-support/style.css" />
 </head>
 <body>
-
-  <!-- Header / Nav -->
   <header class="nav">
     <div class="container inner">
-      <a class="brand" href="index.html">Health-wise Support</a>
-
-      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu">
+      <a class="brand" href="/health-wise-support/index.html">Health-wise Support</a>
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" hidden />
       <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
-
       <nav class="menu" aria-label="Primary">
-        <a href="index.html" data-nav="home">Home</a>
-        <a href="faq.html" data-nav="faq">FAQs</a>
-        <a href="terms.html" data-nav="terms">Terms</a>
-        <a href="privacy.html" data-nav="privacy">Privacy</a>
-        <a href="contact.html" data-nav="contact">Contact</a>
-        <a href="about.html" data-nav="about">About</a>
-        <a class="active" href="changelog.html" data-nav="changelog">Changelog</a>
+        <a href="/health-wise-support/index.html">Home</a>
+        <a href="/health-wise-support/faq.html">FAQ</a>
+        <a href="/health-wise-support/terms.html">Terms</a>
+        <a href="/health-wise-support/privacy.html">Privacy</a>
+        <a href="/health-wise-support/contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="container stack">
+  <main class="container pad prose">
     <h1>Changelog</h1>
-    <p class="muted">Latest improvements, fixes, and features. Version numbers match the App Store release.</p>
 
-    <!-- Release block -->
     <section class="card">
       <h2>1.0.0 — Initial Release</h2>
       <ul>
-        <li>Core tracking: activity, hydration, and nutrition.</li>
-        <li>Mood, stress, and sleep check-ins.</li>
-        <li>GPS workouts (walks, runs, routes) with low-power mode hinting.</li>
-        <li>Smart reminders and streaks.</li>
-        <li>Light & dark theme; accessibility improvements.</li>
-        <li>In-app support link to this site.</li>
+        <li>Core tracking (activity, mood, sleep, hydration).</li>
+        <li>AI insights (optional).</li>
+        <li>GPS support for walks/jogs.</li>
+        <li>Reminders, light/dark mode.</li>
       </ul>
-      <p class="muted">Released: 2025-08-16</p>
+      <p class="muted">Released: Aug 2025</p>
     </section>
 
-    <!-- Template for future releases -->
     <section class="card">
-      <h3 class="muted">How we version</h3>
-      <p>We use <strong>SemVer</strong> (MAJOR.MINOR.PATCH). We’ll append notes here for each update.</p>
-      <pre class="code-block"><code>
-## 1.1.0 — Feature Title
-- New: ...
-- Improved: ...
-- Fixed: ...
-
-## 1.0.1 — Patch Title
-- Fixed: ...
-      </code></pre>
+      <h2>1.0.1 — Stability & polish</h2>
+      <ul>
+        <li>Improved onboarding and permissions guidance.</li>
+        <li>Bug fixes and performance improvements.</li>
+      </ul>
+      <p class="muted">Planned</p>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="container stack">
       <div class="links">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="sitemap.xml">Sitemap</a>
-        <a href="about.html">About</a>
-        <a href="changelog.html" aria-current="page">Changelog</a>
+        <a href="/health-wise-support/privacy.html">Privacy</a>
+        <a href="/health-wise-support/terms.html">Terms</a>
+        <a href="/health-wise-support/sitemap.xml">Sitemap</a>
+        <a href="/health-wise-support/contact.html">Contact</a>
       </div>
-      <p class="muted">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
+    <p class="muted">© 2025 Health-wise Support / DELEBOSTON INC. All rights reserved.</p>
   </footer>
 
-  <!-- mark active nav by pathname -->
   <script>
-    const map = { "index.html":"home","faq.html":"faq","privacy.html":"privacy","terms.html":"terms","contact.html":"contact","about.html":"about","changelog.html":"changelog" };
-    const key = map[location.pathname.split('/').pop()] || null;
-    if (key) { const el = document.querySelector(`[data-nav="${key}"]`); if (el) el.setAttribute("aria-current","page"); }
-    document.getElementById('y').textContent = new Date().getFullYear();
- <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/health-wise-support/sw.js')
-      .then(reg => console.log('SW registered:', reg.scope))
-      .catch(err => console.error('SW register failed:', err));
-  }
-</script>
-
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/health-wise-support/sw.js')
+        .catch(err => console.error('SW registration failed:', err));
+    }
+  </script>
 </body>
 </html>
