@@ -13,20 +13,32 @@
   <meta name="description" content="Support site for the Health-wise (Wellness) app: FAQs, troubleshooting, policies, and contact." />
 
   <!-- PWA / icons -->
-  <link rel="manifest" href="manifest.json" />
-  <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-192.png" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+--- a/index.html
++++ b/index.html
+@@
+-  <link rel="manifest" href="/health-wise-support/manifest.json">
+-  <link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml">
+-  <link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png">
++  <link rel="manifest" href="manifest.json">
++  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
++  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+   <meta name="theme-color" content="#001117">
+-  <link rel="stylesheet" href="/health-wise-support/style.css">
++  <link rel="stylesheet" href="style.css">
+ </head>
+-<body>
++<body>
+@@
+-  <!-- (if you had an earlier SW block in <head>, it will be removed) -->
++  <!-- Service worker (register from repo-relative path) -->
++  <script>
++    if ('serviceWorker' in navigator) {
++      navigator.serviceWorker.register('sw.js')
++        .catch(console.error);
++    }
++  </script>
+ </body>
 
-  <link rel="stylesheet" href="style.css" />
-</head>
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/health-wise-support/sw.js')
-      .then(reg => console.log('SW registered:', reg.scope))
-      .catch(err => console.error('SW register failed:', err));
-  }
-</script>
 
 <body>
 
