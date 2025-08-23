@@ -1,168 +1,75 @@
 <!doctype html>
 <html lang="en">
 <head>
-<link rel="manifest" href="/health-wise-support/manifest.json">
-<link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png">
-<meta name="theme-color" content="#001117">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Use · Health-wise</title>
+  <meta name="description" content="Terms of Use for Health-wise (Wellness)." />
+  <meta name="theme-color" content="#001117" />
 
-  <!-- PWA / Manifest -->
-  <link rel="manifest" href="/health-wise-support/manifest.json">
-  <meta name="theme-color" content="#001117">
+  <link rel="manifest" href="/health-wise-support/manifest.json" />
+  <link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <!-- iOS add-to-home-screen icons & behavior -->
-  <link rel="apple-touch-icon" href="/health-wise-support/icons/icon-192.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <meta charset="utf-8">
-  <title>Terms of Use • Health-wise</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Terms of Use for Health-wise (Wellness)">
-
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/health-wise-support/style.css" />
 </head>
- <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/health-wise-support/sw.js')
-      .then(reg => console.log('SW registered:', reg.scope))
-      .catch(err => console.error('SW register failed:', err));
-  }
-</script>
-
 <body>
-
-  <!-- Header / Nav -->
   <header class="nav">
     <div class="container inner">
-      <a class="brand" href="index.html">Health-wise Support</a>
-
-      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" hidden>
-      <label class="hamb" for="nav-toggle" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </label>
-
+      <a class="brand" href="/health-wise-support/index.html">Health-wise Support</a>
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" hidden />
+      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
       <nav class="menu" aria-label="Primary">
-        <a href="index.html" data-nav="home">Home</a>
-        <a href="faq.html" data-nav="faq">FAQs</a>
-        <a href="privacy.html" data-nav="privacy">Privacy</a>
-        <a href="terms.html" data-nav="terms" aria-current="page">Terms</a>
-        <a href="contact.html" data-nav="contact">Contact</a>
+        <a href="/health-wise-support/index.html">Home</a>
+        <a href="/health-wise-support/faq.html">FAQ</a>
+        <a href="/health-wise-support/terms.html" aria-current="page">Terms</a>
+        <a href="/health-wise-support/privacy.html">Privacy</a>
+        <a href="/health-wise-support/contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="container stack">
+  <main class="container pad prose">
     <h1>Terms of Use</h1>
-    <p class="muted">Last updated: <span id="lastUpdated">2025-08-19</span></p>
-
-    <section class="card" id="agreement">
-      <h2>1. Agreement</h2>
-      <p>
-        By downloading, installing, or using Health-wise (Wellness) (“App”), you agree to these Terms.
-        If you do not agree, do not use the App.
-      </p>
-    </section>
-
-    <section class="card" id="license">
-      <h2>2. License</h2>
-      <p>
-        We grant you a personal, non-transferable, revocable license to use the App on devices you own
-        or control, subject to these Terms and the App Store Terms.
-      </p>
-    </section>
-
-    <section class="card" id="use">
-      <h2>3. Acceptable Use</h2>
-      <ul>
-        <li>Do not reverse engineer, decompile, or modify the App.</li>
-        <li>Do not use the App for unlawful purposes or to infringe others’ rights.</li>
-        <li>Do not attempt to access data without consent.</li>
-      </ul>
-    </section>
-
-    <section class="card" id="health-disclaimer">
-      <h2>4. Health Disclaimer</h2>
-      <p>
-        The App provides informational and tracking tools only and is not a substitute for professional
-        medical advice, diagnosis, or treatment. Seek advice from a qualified healthcare provider for
-        medical questions. Use at your own discretion.
-      </p>
-    </section>
-
-    <section class="card" id="privacy">
-      <h2>5. Privacy</h2>
-      <p>
-        Your use of the App is also governed by our <a href="privacy.html">Privacy Policy</a>, which explains
-        what we collect and how we use it.
-      </p>
-    </section>
-
-    <section class="card" id="subscriptions">
-      <h2>6. Purchases & Subscriptions</h2>
-      <p>
-        If future versions include paid features, billing and refund handling will be managed by the platform
-        provider (Apple). Prices and terms will be shown in-app before purchase.
-      </p>
-    </section>
-
-    <section class="card" id="ip">
-      <h2>7. Intellectual Property</h2>
-      <p>
-        The App and all related materials are owned by DELEBOSTON INC. or its licensors and protected by law.
-      </p>
-    </section>
-
-    <section class="card" id="warranty">
-      <h2>8. Warranty Disclaimer</h2>
-      <p>
-        The App is provided “AS IS” and “AS AVAILABLE” without warranties of any kind, express or implied,
-        including fitness for a particular purpose and non-infringement.
-      </p>
-    </section>
-
-    <section class="card" id="liability">
-      <h2>9. Limitation of Liability</h2>
-      <p>
-        To the maximum extent permitted by law, DELEBOSTON INC. shall not be liable for indirect, incidental,
-        special, consequential, or punitive damages arising from your use of the App.
-      </p>
-    </section>
-
-    <section class="card" id="changes">
-      <h2>10. Changes</h2>
-      <p>
-        We may update these Terms. Continued use after changes means you accept the updated Terms.
-      </p>
-    </section>
-
-    <section class="card" id="contact">
-      <h2>11. Contact</h2>
-      <p>Questions about these Terms? Visit our <a href="contact.html">Contact Support</a> page.</p>
-    </section>
+    <p>Effective date: <strong>August 2025</strong></p>
+    <h2>Acceptance</h2>
+    <p>By using Health-wise, you agree to these terms and all applicable policies.</p>
+    <h2>License</h2>
+    <p>We grant you a personal, non-transferable license to use the app in accordance with these terms and the App Store rules.</p>
+    <h2>User responsibilities</h2>
+    <ul>
+      <li>Do not misuse the app or attempt to reverse engineer it.</li>
+      <li>Use Health-wise for lawful, personal wellness purposes.</li>
+    </ul>
+    <h2>Disclaimer</h2>
+    <p>Health-wise is not a medical device and does not provide medical advice.</p>
+    <h2>Liability</h2>
+    <p>To the fullest extent permitted by law, we disclaim all warranties and limit liability.</p>
+    <h2>Changes</h2>
+    <p>We may update these terms; continued use after changes means you accept the updated terms.</p>
+    <h2>Contact</h2>
+    <p><a href="mailto:support@deleboston.com">support@deleboston.com</a></p>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="container stack">
       <div class="links">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html" aria-current="page">Terms</a>
-        <a href="sitemap.xml">Sitemap</a>
-        <a href="contact.html">Contact</a>
+        <a href="/health-wise-support/privacy.html">Privacy</a>
+        <a href="/health-wise-support/terms.html" aria-current="page">Terms</a>
+        <a href="/health-wise-support/sitemap.xml">Sitemap</a>
+        <a href="/health-wise-support/contact.html">Contact</a>
       </div>
-      <p class="muted">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
+    <p class="muted">© 2025 Health-wise Support / DELEBOSTON INC. All rights reserved.</p>
   </footer>
 
   <script>
-    // Active nav
-    const map = { "index.html":"home","faq.html":"faq","privacy.html":"privacy","terms.html":"terms","contact.html":"contact" };
-    const key = map[location.pathname.split('/').pop()] || null;
-    if (key) { const el = document.querySelector(`[data-nav="${key}"]`); if (el) el.setAttribute("aria-current","page"); }
-
-    // Footer year
-    document.getElementById('y').textContent = new Date().getFullYear();
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/health-wise-support/sw.js')
+        .catch(err => console.error('SW registration failed:', err));
+    }
   </script>
 </body>
 </html>
