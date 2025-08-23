@@ -93,11 +93,14 @@
     <p>&copy; 2025 Health-wise Support</p>
   </footer>
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/health-wise-support/sw.js').catch(console.error);
-    }
-  </script>
+ <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/health-wise-support/sw.js')
+      .then(reg => console.log('SW registered:', reg.scope))
+      .catch(err => console.error('SW register failed:', err));
+  }
+</script>
+
 </body>
 </html>
 
