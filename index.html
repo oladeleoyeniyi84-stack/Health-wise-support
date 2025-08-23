@@ -7,20 +7,25 @@
   <meta name="description" content="Your hub for quick help, policies, and contacting our team." />
   <meta name="theme-color" content="#001117" />
 
-  <!-- PWA / Icons (root paths, match repo) -->
- +  <link rel="manifest" href="/Health-wise-support/manifest.json" />
-+  <link rel="icon" href="/Health-wise-support/icons/favicon.svg" type="image/svg+xml" />
-+  <link rel="apple-touch-icon" href="/Health-wise-support/icons/apple-touch-icon.png" />
-   <meta name="theme-color" content="#001117" />
+  <!-- PWA / Icons (relative paths for GitHub Pages) -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- Header / Nav -->
   <header class="nav">
     <div class="container inner">
       <a class="brand" href="index.html" aria-current="page">Health-wise Support</a>
 
       <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" hidden />
-      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
+      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span><span></span></label>
 
       <nav class="menu" aria-label="Primary">
         <a href="index.html" aria-current="page">Home</a>
@@ -51,7 +56,7 @@
         <h2>Popular help topics</h2>
         <ul>
           <li><a href="faq.html#permissions">Fix permissions issues</a></li>
-          <li><a href="faq.html#reminders">I’m not getting reminders</a></li>
+          <li><a href="faq.html#notifications">I'm not getting reminders</a></li>
           <li><a href="faq.html#sync">Data sync &amp; backups</a></li>
         </ul>
       </article>
@@ -64,11 +69,17 @@
           <a class="btn" href="terms.html">Terms of Use</a>
         </p>
       </article>
-    </section>
 
-    <section class="card">
-      <h2>Still stuck?</h2>
-      <p>Reach us via the <a href="contact.html">contact form</a>.</p>
+      <article class="card">
+        <h2>Still stuck?</h2>
+        <p>Reach us via the <a href="contact.html">contact form</a>.</p>
+        <p class="muted">
+          <a href="privacy.html">Privacy</a> ·
+          <a href="terms.html">Terms</a> ·
+          <a href="sitemap.xml">Sitemap</a> ·
+          <a href="contact.html">Contact</a>
+        </p>
+      </article>
     </section>
   </main>
 
@@ -81,32 +92,18 @@
         <a href="sitemap.xml">Sitemap</a>
         <a href="contact.html">Contact</a>
       </div>
-      <p class="muted">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
+      <p class="muted">&copy; <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
     </div>
   </footer>
 
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   <script>
-    // highlight current nav item
-    (function () {
-      const map = { "": "home", "index.html": "home", "faq.html": "faq", "terms.html": "terms", "privacy.html": "privacy", "contact.html": "contact" };
-      const path = (location.pathname.split("/").pop() || "").toLowerCase();
-      const key = map[path] || map[""];
-      const sel = `.menu a[href$="${key === "home" ? "index.html" : key + ".html"}"]`;
-      const el = document.querySelector(sel);
-      if (el) el.setAttribute("aria-current", "page");
-    }());
-    // year
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Register Service Worker (root-relative)
+    // Register service worker once, at the bottom
     if ('serviceWorker' in navigator) {
-     <script>
-     if ('serviceWorker' in navigator) {
--      navigator.serviceWorker.register('/health-wise-support/sw.js')
-+      navigator.serviceWorker.register('/Health-wise-support/sw.js')
-         .then(reg => console.log('SW registered:', reg.scope))
-         .catch(err => console.error('SW register failed:', err));
-     }
-   </script>
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('SW registered:', reg.scope))
+        .catch(err => console.error('SW registration failed:', err));
+    }
+  </script>
 </body>
 </html>
