@@ -1,103 +1,21 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Support • Health-wise</title>
-  <meta name="description" content="Contact support for Health-wise." />
-  <meta name="theme-color" content="#001117" />
-
-  <!-- PWA / icons (root-relative for GitHub Pages under /health-wise-support/) -->
-<link rel="manifest" href="/health-wise-support/manifest.json">
-<link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png">
-<meta name="theme-color" content="#001117">
-
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/health-wise-support/style.css" />
-</head>
-<body>
-  
-
-
-  <!-- Header / Nav -->
-  <header class="nav">
-    <div class="container inner">
-      <a class="brand" href="/health-wise-support/index.html">Health-wise Support</a>
-      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" hidden />
-      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span></label>
-
-      <nav class="menu" aria-label="Primary">
-        <a href="/health-wise-support/index.html">Home</a>
-        <a href="/health-wise-support/faq.html">FAQ</a>
-        <a href="/health-wise-support/terms.html">Terms</a>
-        <a href="/health-wise-support/privacy.html">Privacy</a>
-        <a href="/health-wise-support/contact.html" aria-current="page">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Main -->
-  <main class="container pad">
-    <h1>Contact Support</h1>
-    <p>Have a question or found a bug? Reach us using the form below.</p>
-
-    <form class="stack card" action="https://formspree.io/f/your-id" method="POST">
-      <label>
-        Name
-        <input type="text" name="name" required />
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" required />
-      </label>
-      <label>
-        Subject
-        <input type="text" name="subject" />
-      </label>
-      <label>
-        Message
-        <textarea name="message" rows="6" required></textarea>
-      </label>
-
-      <!-- optional extra debugging info -->
-      <input type="hidden" name="page" value="contact" />
-      <button type="submit" class="btn">Send</button>
-    </form>
-
-    <div class="muted">
-      Prefer email? Write us at
-      <a href="mailto:support@deleboston.com">support@deleboston.com</a>
-    </div>
-  </main>
-
-  <!-- Footer -->  <footer>
-    <div class="container stack">
-      <div class="links">
-        <a href="/health-wise-support/privacy.html">Privacy</a>
-        <a href="/health-wise-support/terms.html">Terms</a>
-        <a href="/health-wise-support/sitemap.xml">Sitemap</a>
-        <a href="/health-wise-support/contact.html">Contact</a>
-      </div>
-    </div>
-    <p class="muted">© 2025 Health-wise Support / DELEBOSTON INC. All rights reserved.</p>
-  </footer>
-
-  <!-- Service Worker registration -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/health-wise-support/sw.js')
-        .then(reg => console.log('SW registered:', reg.scope))
-        .catch(err => console.error('SW registration failed:', err));
-    }
-  </script>
-</body>
-</html>
-
-
-
-  
-
-
+--- a/privacy.html
++++ b/privacy.html
+@@
+-  <link rel="manifest" href="/health-wise-support/manifest.json">
+-  <link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml">
+-  <link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png">
++  <link rel="manifest" href="manifest.json">
++  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
++  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+   <meta name="theme-color" content="#001117">
+-  <link rel="stylesheet" href="/health-wise-support/style.css">
++  <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+@@
++  <script>
++    if ('serviceWorker' in navigator) {
++      navigator.serviceWorker.register('sw.js').catch(console.error);
++    }
++  </script>
+ </body>
