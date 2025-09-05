@@ -1,111 +1,62 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Health-wise Support</title>
-  <meta name="description" content="Your hub for quick help, policies, and contacting our team." />
-  <meta name="theme-color" content="#001117" />
+ <!doctype html>
+ <html lang="en">
+ <head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+-  <title>Health-wise Support</title>
+-  <meta name="description" content="Your hub for quick help, policies, and contacting our team." />
+-  <meta name="theme-color" content="#001117" />
+-
+-  <!-- PWA / Icons (root-relative paths under /health-wise-support/) -->
+-  <link rel="manifest" href="/health-wise-support/manifest.json" />
+-  <link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml" />
+-  <link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png" />
+-  <meta name="apple-mobile-web-app-capable" content="yes" />
+-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+-
+-  <!-- Styles -->
+-  <link rel="stylesheet" href="/health-wise-support/style.css" />
++  <title>Health-wise Support</title>
++  <meta name="description" content="Your hub for quick help, policies, and contacting our team." />
++  <meta name="theme-color" content="#001117" />
++
++  <!-- PWA / Icons (relative paths for GitHub Pages) -->
++  <link rel="manifest" href="manifest.json" />
++  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
++  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
++  <meta name="apple-mobile-web-app-capable" content="yes" />
++  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
++
++  <!-- Styles -->
++  <link rel="stylesheet" href="style.css" />
+ </head>
+ <body>
+   <!-- Header / Nav -->
+   <header class="nav">
+     <div class="container inner">
+-      <a class="brand" href="/health-wise-support/index.html" aria-current="page">Health-wise Support</a>
++      <a class="brand" href="index.html" aria-current="page">Health-wise Support</a>
+       <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" hidden />
+       <label class="hamb" for="nav-toggle"><span></span><span></span><span></span><span></span></label>
+       <nav class="menu" aria-label="Primary">
+-        <a href="/health-wise-support/index.html">Home</a>
+-        <a href="/health-wise-support/faq.html">FAQ</a>
+-        <a href="/health-wise-support/terms.html">Terms</a>
+-        <a href="/health-wise-support/privacy.html">Privacy</a>
+-        <a href="/health-wise-support/contact.html">Contact</a>
++        <a href="index.html">Home</a>
++        <a href="faq.html">FAQ</a>
++        <a href="terms.html">Terms</a>
++        <a href="privacy.html">Privacy</a>
++        <a href="contact.html">Contact</a>
+       </nav>
+     </div>
+   </header>
 
-  <!-- PWA / Icons (root-relative for GitHub Pages under /health-wise-support/) -->
-  <link rel="manifest" href="/health-wise-support/manifest.json" />
-  <link rel="icon" href="/health-wise-support/icons/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="/health-wise-support/icons/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/health-wise-support/style.css" />
-</head>
-<body>
-
-  <!-- Header / Nav -->
-  <header class="nav">
-    <div class="container inner">
-      <a class="brand" href="/health-wise-support/index.html" aria-current="page">Health-wise Support</a>
-
-      <input type="checkbox" id="nav-toggle" aria-label="Toggle menu" hidden />
-      <label class="hamb" for="nav-toggle"><span></span><span></span><span></span><span></span></label>
-
-      <nav class="menu" aria-label="Primary">
-        <a href="/health-wise-support/index.html" aria-current="page">Home</a>
-        <a href="/health-wise-support/faq.html">FAQ</a>
-        <a href="/health-wise-support/terms.html">Terms</a>
-        <a href="/health-wise-support/privacy.html">Privacy</a>
-        <a href="/health-wise-support/contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Main -->
-  <main class="container pad">
-    <h1>Welcome to Health-wise Support</h1>
-    <p>Your hub for quick help, policies, and contacting our team.</p>
-
-    <section class="grid">
-      <article class="card">
-        <h2>Quick start</h2>
-        <ol>
-          <li>Grant Motion &amp; Fitness and Location permissions on first launch.</li>
-          <li>Enable Notifications for reminders.</li>
-          <li>For GPS routes, keep Low Power Mode off.</li>
-        </ol>
-      </article>
-
-      <article class="card">
-        <h2>Popular help topics</h2>
-        <ul>
-          <li><a href="/health-wise-support/faq.html#permissions">Fix permissions issues</a></li>
-          <li><a href="/health-wise-support/faq.html#reminders">I’m not getting reminders</a></li>
-          <li><a href="/health-wise-support/faq.html#sync">Data sync &amp; backups</a></li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2>Policies</h2>
-        <p>Our policies explain data handling and your rights.</p>
-        <p>
-          <a class="btn" href="/health-wise-support/privacy.html">Privacy Policy</a>
-          <a class="btn" href="/health-wise-support/terms.html">Terms of Use</a>
-        </p>
-      </article>
-    </section>
-
-    <section class="card">
-      <h2>Still stuck?</h2>
-      <p>Reach us via the <a href="/health-wise-support/contact.html">contact form</a>.</p>
-      <p class="links">
-        <a href="/health-wise-support/privacy.html">Privacy</a>
-        <a href="/health-wise-support/terms.html">Terms</a>
-        <a href="/health-wise-support/sitemap.xml">Sitemap</a>
-        <a href="/health-wise-support/contact.html">Contact</a>
-      </p>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container stack">
-      <div class="links">
-        <a href="/health-wise-support/privacy.html">Privacy</a>
-        <a href="/health-wise-support/terms.html">Terms</a>
-        <a href="/health-wise-support/sitemap.xml">Sitemap</a>
-        <a href="/health-wise-support/contact.html">Contact</a>
-      </div>
-      <p class="muted">© <span id="y"></span> DELEBOSTON INC. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    // Footer year
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Register the service worker (root-relative path so it works on any page)
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/health-wise-support/sw.js')
-        .then(reg => console.log('SW registered:', reg.scope))
-        .catch(err => console.error('SW register failed:', err));
-    }
-  </script>
-</body>
-</html>
+   <!-- Footer -->
+   <footer>
+-    <script src="/health-wise-support/sw.js"></script>
++    <script src="sw.js"></script>
+   </footer>
+ </body>
+ </html>
